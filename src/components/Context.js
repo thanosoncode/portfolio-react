@@ -8,6 +8,7 @@ export const AppContextProvider = ({ children }) => {
   const [index, setIndex] = useState(0);
   const [width, setWidth] = useState();
   const [size, setSize] = useState("large");
+  const [overflow, setOverflow] = useState("auto");
 
   useEffect(() => {
     const getWidth = () => {
@@ -20,6 +21,9 @@ export const AppContextProvider = ({ children }) => {
       }
       if (width >= 800) {
         setSize("large");
+      }
+      if (width < 500) {
+        setSize("medium");
       }
     };
 
@@ -67,6 +71,7 @@ export const AppContextProvider = ({ children }) => {
     titleSize: titleSizes[size][index],
     headerSize: headerSizes[size][index],
     mainTitle: mainTitleSizes[size][index],
+    overflow: overflow,
   };
 
   const nightTheme = {
@@ -86,6 +91,7 @@ export const AppContextProvider = ({ children }) => {
     titleSize: titleSizes[index],
     headerSize: headerSizes[index],
     mainTitle: mainTitleSizes[index],
+    overflow: overflow,
   };
 
   const value = {
@@ -95,6 +101,8 @@ export const AppContextProvider = ({ children }) => {
     nightTheme,
     nightMode,
     setNightMode,
+    overflow,
+    setOverflow,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

@@ -28,9 +28,11 @@ export const Card = styled.div`
   transition: 0.3s ease;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  box-shadow: 0 0 10px gray;
+
   &:hover {
-    box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 10px red;
   }
 
   article {

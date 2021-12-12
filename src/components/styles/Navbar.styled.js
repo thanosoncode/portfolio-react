@@ -4,6 +4,7 @@ export const StyledNavbar = styled.nav`
   max-width: 90vw;
   margin: 0 auto;
   padding: 25px 30px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,12 +70,22 @@ export const Links = styled.ul`
   justify-content: center;
   align-items: center;
 
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
   li {
     margin-left: 30px;
 
     cursor: pointer;
     font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize};
+    transition: transform 0.3s ease-in;
   }
 
   li a {
@@ -84,7 +95,13 @@ export const Links = styled.ul`
 
   li:hover {
     opacity: 0.8;
-    transition: transform 0.3s ease-in;
+  }
+
+  li:last-child {
+    display: none;
+    @media (max-width: 700px) {
+      display: block;
+    }
   }
 `;
 
@@ -162,4 +179,53 @@ export const Triangle = styled.div`
   border-top: 1px solid #aaa;
   border-right: 1px solid #aaa;
   background-color: ${({ theme }) => theme.modal};
+`;
+
+export const MobileLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: ${({ theme }) => theme.fontSize};
+    transition: transform 0.3s ease-in;
+  }
+
+  div:hover {
+    opacity: 0.8;
+  }
+`;
+
+export const MobileMenu = styled.ul`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 100px;
+  left: 0;
+  list-style: none;
+  background-color: ${({ theme }) => theme.bg};
+  visibility: ${(props) => props.visibility};
+  opacity: ${(props) => props.opacity};
+  transition: 0.4s ease;
+  padding-top: 30px;
+
+  li {
+    margin-left: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: ${({ theme }) => theme.fontSize};
+  }
+
+  li a {
+    color: ${({ theme }) => theme.color};
+    font-size: ${(theme) => theme.fontSize};
+  }
+
+  li:hover {
+    opacity: 0.8;
+    transition: transform 0.3s ease-in;
+  }
 `;

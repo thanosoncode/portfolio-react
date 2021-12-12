@@ -1,6 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GoSettings } from "react-icons/go";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 import {
   StyledNavbar,
   Image,
@@ -10,12 +12,15 @@ import {
   SwitchContainer,
   Letter,
   Triangle,
+  MobileMenu,
+  // MobileLinks,
 } from "./styles/Navbar.styled.js";
 import logo from "../assets/profile.png";
 import { useGlobalContext } from "./Context.js";
 
 const Navbar = () => {
-  const { nightMode, setNightMode, index, setIndex } = useGlobalContext();
+  const { nightMode, setNightMode, index, setIndex, setOverflow } =
+    useGlobalContext();
 
   const settings = useRef();
   const modal = useRef();
@@ -27,7 +32,7 @@ const Navbar = () => {
 
   const getSettingsCoords = () => {
     const distanceFromLeft =
-      settings.current.getBoundingClientRect().x - 170 + "px";
+      settings.current.getBoundingClientRect().x - 208 + "px";
     const distanceFromTop =
       settings.current.getBoundingClientRect().y + 30 + "px";
     setFromLeft(distanceFromLeft);
@@ -74,8 +79,26 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", getWidth);
   }, [pixels]);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+      setOverflow("auto");
+    }
+    if (!isMenuOpen) {
+      setIsMenuOpen(true);
+      setOverflow("hidden");
+    }
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setOverflow("auto");
+  };
+
   return (
-    <StyledNavbar>
+    <StyledNavbar position={isMenuOpen ? "fixed" : "static"}>
       <div>
         <Image>
           <img src={logo} alt="" />
@@ -95,20 +118,47 @@ const Navbar = () => {
         </StyledSocials>
       </div>
       <Links>
-        <li>{pixels}</li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        <ul>
+          <li>{pixels}</li>
+          <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
         <li ref={settings} onClick={handleSettingsClick}>
           <GoSettings />
         </li>
+        <li onClick={handleMenuClick}>
+          {isMenuOpen ? <AiOutlineClose /> : <HiOutlineMenuAlt4 />}
+        </li>
       </Links>
+      {/* <MobileLinks>
+        <div>
+          <GoSettings />
+        </div>
+        
+      </MobileLinks> */}
+
+      <MobileMenu
+        opacity={isMenuOpen ? "1" : "0"}
+        visibility={isMenuOpen ? "1" : "0"}
+      >
+        <li onClick={handleLinkClick}>
+          <a href="#skills">Skills</a>
+        </li>
+        <li onClick={handleLinkClick}>
+          <a href="#projects">Projects</a>
+        </li>
+        <li onClick={handleLinkClick}>
+          <a href="#contact">Contact</a>
+        </li>
+      </MobileMenu>
+
       <Modal
         visibility={isSettingsOpen ? "visible" : "hidden"}
         opacity={isSettingsOpen ? "1" : "0"}

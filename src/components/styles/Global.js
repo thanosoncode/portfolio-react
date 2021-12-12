@@ -18,6 +18,8 @@ body {
   color:${({ theme }) => theme.color};
   background-color: ${({ theme }) => theme.bg};
   overflow-x:hidden;
+  overflow:${({ theme }) => theme.overflow};
+  
 }
 
 a{
