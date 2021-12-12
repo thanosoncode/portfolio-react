@@ -58,6 +58,9 @@ export const ImageContainer = styled.div`
     object-fit: cover;
     border-radius: ${({ theme }) => theme.radiusCard};
   }
+  @media (max-width: 700px) {
+    min-width: 384px;
+  }
 `;
 
 export const Article = styled.section`
@@ -91,5 +94,6 @@ export const SectionFooter = styled.p`
   grid-area: footer;
   @media (max-width: 700px) {
     margin-top: -20px;
+    min-width: 384px;
   }
 `;

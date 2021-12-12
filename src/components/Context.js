@@ -23,7 +23,7 @@ export const AppContextProvider = ({ children }) => {
         setSize("large");
       }
       if (width < 500) {
-        setSize("medium");
+        setSize("mobile");
       }
     };
 
@@ -36,22 +36,26 @@ export const AppContextProvider = ({ children }) => {
     small: ["14px", "15px", "16px"],
     medium: ["16px", "17px", "18px"],
     large: ["18px", "19px", "20px"],
+    mobile: ["14px", "15px", "16px"],
   };
 
   const titleSizes = {
     small: ["21px", "22px", "23px"],
     medium: ["23px", "24px", "25px"],
     large: ["25px", "26px", "27px"],
+    mobile: ["23px", "24px", "25px"],
   };
   const headerSizes = {
     small: ["17px", "18px", "19px"],
     medium: ["19px", "20px", "21px"],
     large: ["21px", "22px", "23px"],
+    mobile: ["19px", "20px", "21px"],
   };
   const mainTitleSizes = {
     small: ["46px", "47px", "48px"],
     medium: ["48px", "49px", "50px"],
     large: ["50px", "51px", "52px"],
+    mobile: ["38px", "40px", "42px"],
   };
 
   const dayTheme = {
