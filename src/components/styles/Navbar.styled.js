@@ -4,7 +4,7 @@ export const StyledNavbar = styled.nav`
   max-width: 90vw;
   margin: 0 auto;
   padding: 25px 30px;
-  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +23,7 @@ export const StyledNavbar = styled.nav`
   }
   @media (max-width: 600px) {
     padding: 15px;
+    max-width: 100vw;
   }
 `;
 export const Image = styled.div`
@@ -103,16 +104,18 @@ export const Links = styled.ul`
     opacity: 0.8;
   }
 
-  li:last-child {
-    display: none;
-    @media (max-width: 700px) {
-      display: block;
-    }
   }
   @media (max-width: 700px) {
     li {
       font-size: ${({ theme }) => theme.links};
     }
+  }
+`;
+
+export const Hamburger = styled.li`
+  display: none;
+  @media (max-width: 700px) {
+    display: block;
   }
 `;
 
@@ -183,13 +186,14 @@ export const Letter = styled.div`
 export const Triangle = styled.div`
   position: absolute;
   top: -6px;
-  left: 88%;
+  left: 160px;
   width: 12px;
   height: 12px;
   transform: rotate(-45deg);
   border-top: 1px solid #aaa;
   border-right: 1px solid #aaa;
   background-color: ${({ theme }) => theme.modal};
+  transition: 0.3s ease;
 `;
 
 export const MobileLinks = styled.div`
@@ -200,7 +204,7 @@ export const MobileLinks = styled.div`
     margin-left: 10px;
     cursor: pointer;
     font-weight: 500;
-    font-size: ${({ theme }) => theme.fontSize};
+    font-size: ${({ theme }) => theme.links};
     transition: transform 0.3s ease-in;
   }
 

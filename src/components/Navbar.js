@@ -13,7 +13,7 @@ import {
   Letter,
   Triangle,
   MobileMenu,
-  // MobileLinks,
+  Hamburger,
 } from "./styles/Navbar.styled.js";
 import logo from "../assets/profile.png";
 import { useGlobalContext } from "./Context.js";
@@ -32,9 +32,10 @@ const Navbar = () => {
 
   const getSettingsCoords = () => {
     const distanceFromLeft =
-      settings.current.getBoundingClientRect().x - 208 + "px";
+      settings.current.getBoundingClientRect().x - 155 + "px";
     const distanceFromTop =
-      settings.current.getBoundingClientRect().y + 30 + "px";
+      settings.current.getBoundingClientRect().y + 40 + "px";
+    console.log(settings.current.getBoundingClientRect().x);
     setFromLeft(distanceFromLeft);
     setFromTop(distanceFromTop);
   };
@@ -133,9 +134,9 @@ const Navbar = () => {
         <li ref={settings} onClick={handleSettingsClick}>
           <GoSettings />
         </li>
-        <li onClick={handleMenuClick}>
+        <Hamburger onClick={handleMenuClick}>
           {isMenuOpen ? <AiOutlineClose /> : <HiOutlineMenuAlt4 />}
-        </li>
+        </Hamburger>
       </Links>
       {/* <MobileLinks>
         <div>

@@ -72,12 +72,15 @@ export const Article = styled.section`
     font-size: ${({ theme }) => theme.titleSize};
   }
   p {
-    margin: 30px 0;
+    margin: 10px 0;
     line-height: 28px;
   }
   @media (max-width: 700px) {
     p {
       margin: 5px 0;
+    }
+    h2 {
+      margin: 15px 0;
     }
     margin-top: 20px;
   }

@@ -49,12 +49,12 @@ export const Card = styled.div`
     padding: 25px;
   }
   h1 {
-    font-size: 20px;
+    font-size: ${({ theme }) => theme.headerSize};
     margin-bottom: 10px;
   }
   p {
-    font-size: 14px;
     margin-bottom: 10px;
+    font-size: ${({ theme }) => theme.fontSize};
   }
 `;
 
@@ -65,6 +65,7 @@ export const Stack = styled.div`
     border-radius: 999px;
     background-color: ${({ theme }) => theme.gray};
     padding: 4px 12px;
+    font-size: ${({ theme }) => theme.fontSize};
   }
 `;
 
@@ -77,6 +78,7 @@ export const Links = styled.ul`
     color: ${({ theme }) => theme.accent};
     font-weight: 500;
     margin-right: 15px;
+    font-size: ${({ theme }) => theme.fontSize};
   }
 
   li:hover {

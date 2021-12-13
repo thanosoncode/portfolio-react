@@ -38,8 +38,9 @@ const Contact = () => {
       <Form onSubmit={sendEmail}>
         <h4>Let&#39;s get in touch.</h4>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos,
-          quis! Eligendi odio ipsam corporis perspiciatis.
+          Would be happy to help you with your project, feel free to share your
+          ideas and we will discuss how we can collaborate to make your project
+          successful.
         </p>
         <input type="text" placeholder="Name" />
         <input type="email" placeholder="Email" />

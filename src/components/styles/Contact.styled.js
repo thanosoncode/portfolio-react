@@ -14,6 +14,10 @@ export const ContactContainer = styled.div`
     margin: 120px 15px;
     padding: 30px 30px;
   }
+  @media (max-width: 700px) {
+    padding: 30px 10px 50px 10px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const Form = styled.form`

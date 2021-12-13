@@ -23,20 +23,21 @@ const About = () => {
         <Article>
           <h2>A bit about me</h2>
           <p>
-            I create successful responsive websites that are fast, easy to use
-            and built with best practices. The main area of expertise is
-            front-end development, HTML, CSS, JS, building small and medium web
-            apps, coding interactive layouts.
+            Last year I was fortunate enough to be in a lockdown and started
+            thinking of ways how to fill all these extra hours. Luckily, I found
+            out about code! <br />I did a few courses, got frustrated, didn't
+            want to see code again, the usual staff. But somehow I insisted and
+            things slowly started making a little sense.
           </p>
           <p>
-            I like to code things from scratch, and enjoy bringing ideas to life
-            in the browser.
+            I loved the learning process and the feeling that comes with
+            building something by yourself. <br />I like how I can start from an
+            empty folder and gradually bring ideas to life in the browser.
           </p>
         </Article>
         <SectionFooter>
-          I love coding and the feeling that comes with building something by
-          yourself. When I build something new, I usually learn something in the
-          process.
+          I currently enjoy working with React and Styled Components having
+          things nice and organized and implement best practices.
         </SectionFooter>
       </Grid>
     </StyledAbout>
