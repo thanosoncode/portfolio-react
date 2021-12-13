@@ -36,7 +36,7 @@ export const AppContextProvider = ({ children }) => {
     small: ["14px", "15px", "16px"],
     medium: ["16px", "17px", "18px"],
     large: ["18px", "19px", "20px"],
-    mobile: ["14px", "15px", "16px"],
+    mobile: ["16px", "17px", "18px"],
   };
 
   const titleSizes = {
@@ -58,6 +58,8 @@ export const AppContextProvider = ({ children }) => {
     mobile: ["38px", "40px", "42px"],
   };
 
+  const links = ["22px", "24px", "26px"];
+
   const dayTheme = {
     color: "#242424",
     colorLight: "hsl(0, 0%, 24%)",
@@ -75,6 +77,7 @@ export const AppContextProvider = ({ children }) => {
     titleSize: titleSizes[size][index],
     headerSize: headerSizes[size][index],
     mainTitle: mainTitleSizes[size][index],
+    links: links[index],
     overflow: overflow,
   };
 

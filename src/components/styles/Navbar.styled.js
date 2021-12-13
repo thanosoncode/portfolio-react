@@ -21,6 +21,9 @@ export const StyledNavbar = styled.nav`
     width: 1px;
     margin: 0 5px;
   }
+  @media (max-width: 600px) {
+    padding: 15px;
+  }
 `;
 export const Image = styled.div`
   width: 50px;
@@ -52,10 +55,10 @@ export const StyledSocials = styled.ul`
   li {
     padding: 5px;
     cursor: pointer;
+    font-size: ${({ theme }) => theme.links};
   }
 
   li a {
-    font-size: ${({ theme }) => theme.fontSize};
     color: ${({ theme }) => theme.color};
   }
 
@@ -84,13 +87,13 @@ export const Links = styled.ul`
 
     cursor: pointer;
     font-weight: 500;
-    font-size: ${({ theme }) => theme.fontSize};
+
     transition: transform 0.3s ease-in;
+    font-size: ${({ theme }) => theme.links};
   }
 
   li a {
     color: ${({ theme }) => theme.color};
-    font-size: ${(theme) => theme.fontSize};
   }
 
   li:hover {
