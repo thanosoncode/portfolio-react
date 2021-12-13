@@ -55,7 +55,7 @@ export const StyledSocials = styled.ul`
   li {
     padding: 5px;
     cursor: pointer;
-    font-size: ${({ theme }) => theme.links};
+    font-size: ${({ theme }) => theme.fontSize};
   }
 
   li a {
@@ -65,6 +65,11 @@ export const StyledSocials = styled.ul`
   li:hover {
     opacity: 0.8;
     transition: transform 0.3s ease-in;
+  }
+  @media (max-width: 700px) {
+    li {
+      font-size: ${({ theme }) => theme.links};
+    }
   }
 `;
 export const Links = styled.ul`
@@ -84,12 +89,10 @@ export const Links = styled.ul`
   }
   li {
     margin-left: 30px;
-
     cursor: pointer;
     font-weight: 500;
-
     transition: transform 0.3s ease-in;
-    font-size: ${({ theme }) => theme.links};
+    font-size: ${({ theme }) => theme.fontSize};
   }
 
   li a {
@@ -104,6 +107,11 @@ export const Links = styled.ul`
     display: none;
     @media (max-width: 700px) {
       display: block;
+    }
+  }
+  @media (max-width: 700px) {
+    li {
+      font-size: ${({ theme }) => theme.links};
     }
   }
 `;

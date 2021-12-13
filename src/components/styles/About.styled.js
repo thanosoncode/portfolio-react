@@ -60,6 +60,7 @@ export const ImageContainer = styled.div`
   }
   @media (max-width: 700px) {
     min-width: 384px;
+    margin-bottom: 20px;
   }
 `;
 
@@ -78,6 +79,7 @@ export const Article = styled.section`
     p {
       margin: 5px 0;
     }
+    margin-top: 20px;
   }
 `;
 
@@ -93,7 +95,6 @@ export const Header = styled.div`
 export const SectionFooter = styled.p`
   grid-area: footer;
   @media (max-width: 700px) {
-    margin-top: -20px;
     min-width: 384px;
   }
 `;

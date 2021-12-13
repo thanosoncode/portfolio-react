@@ -42,10 +42,12 @@ export const Flex = styled.div`
   }
 
   @media (max-width: 700px) {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    row-gap: 50px;
+    background: none;
   }
 `;
 export const Image = styled.div`

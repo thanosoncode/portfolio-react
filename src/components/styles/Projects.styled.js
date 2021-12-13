@@ -13,12 +13,22 @@ export const ProjectsContainer = styled.div`
   @media (max-width: 800px) {
     padding: 0 15px;
   }
+
+  @media (max-width: 700px) {
+    p {
+      margin-bottom: 50px;
+    }
+  }
 `;
 
 export const Grid = styled.section`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
+
+  @media (max-width: 700px) {
+    gap: 80px;
+  }
 `;
 
 export const Card = styled.div`

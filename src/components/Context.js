@@ -58,7 +58,7 @@ export const AppContextProvider = ({ children }) => {
     mobile: ["38px", "40px", "42px"],
   };
 
-  const links = ["22px", "24px", "26px"];
+  const links = ["26px", "28px", "30px"];
 
   const dayTheme = {
     color: "#242424",

@@ -25,9 +25,7 @@ body {
 a{
   text-decoration: none;
   color:black;
-  font-size:${({ theme }) => theme.links};
-  
-}
+  }
 
 p{
   font-size:${({ theme }) => theme.fontSize}
