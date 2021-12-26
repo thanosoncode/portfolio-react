@@ -37,13 +37,13 @@ export const Card = styled.div`
   overflow: hidden;
   transition: 0.3s ease;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: column-reverse;
   box-shadow: 0 0 10px gray;
 
-  &:hover {
+  /* &:hover {
     box-shadow: 0 0 20px gray;
-  }
+  } */
 
   article {
     padding: 25px;
@@ -55,41 +55,63 @@ export const Card = styled.div`
   }
 
   p {
-    margin-bottom: 10px;
     font-size: ${({ theme }) => theme.fontSize};
     font-weight: normal;
+    min-height: 83.2px;
+    margin: 10px 0 20px 0;
   }
 `;
 
 export const Stack = styled.div`
-  margin: 15px 0;
+  margin: 5px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 15px;
+
   span {
     border-radius: 999px;
     background-color: ${({ theme }) => theme.gray};
-    padding: 4px 12px;
+    font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize};
   }
 `;
 
 export const Links = styled.div`
   list-style: none;
-  margin: 30px 0 40px 0;
+  margin: 30px 0 20px 0;
   display: flex;
+  justify-content: center;
+  gap: 10px;
 
-  li {
+  a {
+    display: inline-block;
+    padding: 4px 16px;
     transition: 0.3s ease;
+    text-align: center;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: ${({ theme }) => theme.fontSize};
+    text-align: center;
+    border: 2px solid ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.accent};
   }
 
-  li a {
-    color: ${({ theme }) => theme.accent};
-    font-weight: 500;
-    margin-right: 15px;
-    font-size: ${({ theme }) => theme.fontSize};
+  a:hover {
+    background: ${({ theme }) => theme.accent};
+    color: white;
+  }
+
+  a:last-child:hover {
+    background: ${({ theme }) => theme.green};
+    color: white;
+    border: 2px solid ${({ theme }) => theme.green};
+  }
+
+  a:last-child {
+    border: 2px solid ${({ theme }) => theme.green};
+    color: ${({ theme }) => theme.green};
   }
 `;
 

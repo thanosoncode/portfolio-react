@@ -20,24 +20,20 @@ const Projects = () => {
               <article>
                 <h1>{name}</h1>
                 <p>{description}</p>
-
-                <Links>
-                  <li>
-                    <a href={source} target="_blank" rel="noreferrer">
-                      Live
-                    </a>
-                  </li>
-                  <li>
-                    <a href={code} target="_blank" rel="noreferrer">
-                      Code
-                    </a>
-                  </li>
-                </Links>
                 <Stack>
                   {stack.map((item, index) => {
                     return <span key={index}>{item}</span>;
                   })}
                 </Stack>
+                <Links>
+                  <a href={source} target="_blank" rel="noreferrer">
+                    View Demo
+                  </a>
+
+                  <a href={code} target="_blank" rel="noreferrer">
+                    View Code
+                  </a>
+                </Links>
               </article>
 
               <Image>

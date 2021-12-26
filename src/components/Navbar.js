@@ -70,16 +70,6 @@ const Navbar = () => {
     getSettingsCoords();
   }, [index]);
 
-  // const [pixels, setPixels] = useState();
-
-  // useEffect(() => {
-  //   const getWidth = () => setPixels(window.innerWidth);
-
-  //   window.addEventListener("resize", getWidth);
-
-  //   return () => window.removeEventListener("resize", getWidth);
-  // }, [pixels]);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
