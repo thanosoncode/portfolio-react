@@ -35,7 +35,7 @@ const Navbar = () => {
       settings.current.getBoundingClientRect().x - 155 + "px";
     const distanceFromTop =
       settings.current.getBoundingClientRect().y + 40 + "px";
-    console.log(settings.current.getBoundingClientRect().x);
+
     setFromLeft(distanceFromLeft);
     setFromTop(distanceFromTop);
   };

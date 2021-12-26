@@ -5,34 +5,16 @@ const AppContext = React.createContext();
 export const AppContextProvider = ({ children }) => {
   const [nightMode, setNightMode] = useState(false);
   const [index, setIndex] = useState(0);
-  const [size, setSize] = useState("large");
+
   const [overflow, setOverflow] = useState("auto");
 
-  const fontSizes = {
-    small: ["14px", "15px", "16px"],
-    medium: ["16px", "17px", "18px"],
-    large: ["18px", "19px", "20px"],
-    mobile: ["16px", "17px", "18px"],
-  };
+  const fontSizes = ["16px", "17px", "18px"];
 
-  const titleSizes = {
-    small: ["21px", "22px", "23px"],
-    medium: ["23px", "24px", "25px"],
-    large: ["25px", "26px", "27px"],
-    mobile: ["23px", "24px", "25px"],
-  };
-  const headerSizes = {
-    small: ["17px", "18px", "19px"],
-    medium: ["19px", "20px", "21px"],
-    large: ["21px", "22px", "23px"],
-    mobile: ["19px", "20px", "21px"],
-  };
-  const mainTitleSizes = {
-    small: ["46px", "47px", "48px"],
-    medium: ["48px", "49px", "50px"],
-    large: ["50px", "51px", "52px"],
-    mobile: ["38px", "40px", "42px"],
-  };
+  const titleSizes = ["23px", "24px", "25px"];
+
+  const headerSizes = ["19px", "20px", "21px"];
+
+  const mainTitleSizes = ["48px", "49px", "50px"];
 
   const links = ["26px", "28px", "30px"];
 
@@ -49,10 +31,10 @@ export const AppContextProvider = ({ children }) => {
     gray: "white",
     radiusCard: "15px",
     radiusBtn: "4px",
-    fontSize: fontSizes[size][index],
-    titleSize: titleSizes[size][index],
-    headerSize: headerSizes[size][index],
-    mainTitle: mainTitleSizes[size][index],
+    fontSize: fontSizes[index],
+    titleSize: titleSizes[index],
+    headerSize: headerSizes[index],
+    mainTitle: mainTitleSizes[index],
     links: links[index],
     overflow: overflow,
   };
@@ -70,10 +52,10 @@ export const AppContextProvider = ({ children }) => {
     gray: "#444",
     radiusCard: "15px",
     radiusBtn: "4px",
-    fontSize: fontSizes[size][index],
-    titleSize: titleSizes[size][index],
-    headerSize: headerSizes[size][index],
-    mainTitle: mainTitleSizes[size][index],
+    fontSize: fontSizes[index],
+    titleSize: titleSizes[index],
+    headerSize: headerSizes[index],
+    mainTitle: mainTitleSizes[index],
     links: links[index],
     overflow: overflow,
   };
