@@ -80,7 +80,7 @@ export const ModalContainer = styled.div`
   opacity: ${(props) => props.opacity};
 `;
 
-export const Modal = styled.div`
+export const StyledModal = styled.div`
       border-radius:${({ theme }) => theme.radiusCard}}
       border:1px solid ${({ theme }) => theme.color}}
       background-color:white;

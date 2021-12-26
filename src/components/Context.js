@@ -1,36 +1,12 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
 
 const AppContext = React.createContext();
 
 export const AppContextProvider = ({ children }) => {
   const [nightMode, setNightMode] = useState(false);
   const [index, setIndex] = useState(0);
-  const [width, setWidth] = useState();
   const [size, setSize] = useState("large");
   const [overflow, setOverflow] = useState("auto");
-
-  useEffect(() => {
-    const getWidth = () => {
-      setWidth(window.innerWidth);
-      if (width < 800) {
-        setSize("medium");
-      }
-      if (width < 600) {
-        setSize("small");
-      }
-      if (width >= 800) {
-        setSize("large");
-      }
-      if (width < 500) {
-        setSize("mobile");
-      }
-    };
-
-    window.addEventListener("resize", getWidth);
-
-    return () => window.removeEventListener("resize", getWidth);
-  }, [width]);
 
   const fontSizes = {
     small: ["14px", "15px", "16px"],
@@ -70,7 +46,7 @@ export const AppContextProvider = ({ children }) => {
     accent: "hsl(215, 100%, 50%)",
     accentLight: "hsl(215, 100%, 90%)",
     inputs: "white",
-    gray: "#f2f2f2",
+    gray: "white",
     radiusCard: "15px",
     radiusBtn: "4px",
     fontSize: fontSizes[size][index],
@@ -94,10 +70,11 @@ export const AppContextProvider = ({ children }) => {
     gray: "#444",
     radiusCard: "15px",
     radiusBtn: "4px",
-    fontSize: fontSizes[index],
-    titleSize: titleSizes[index],
-    headerSize: headerSizes[index],
-    mainTitle: mainTitleSizes[index],
+    fontSize: fontSizes[size][index],
+    titleSize: titleSizes[size][index],
+    headerSize: headerSizes[size][index],
+    mainTitle: mainTitleSizes[size][index],
+    links: links[index],
     overflow: overflow,
   };
 

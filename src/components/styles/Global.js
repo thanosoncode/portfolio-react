@@ -20,11 +20,12 @@ body {
   overflow-x:hidden;
   overflow:${({ theme }) => theme.overflow};
   
+  
 }
 
 a{
   text-decoration: none;
-  color:black;
+ 
   }
 
 p{

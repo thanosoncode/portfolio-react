@@ -23,10 +23,14 @@ const Projects = () => {
 
                 <Links>
                   <li>
-                    <a href={source}>Live</a>
+                    <a href={source} target="_blank" rel="noreferrer">
+                      Live
+                    </a>
                   </li>
                   <li>
-                    <a href={code}>Code</a>
+                    <a href={code} target="_blank" rel="noreferrer">
+                      Code
+                    </a>
                   </li>
                 </Links>
                 <Stack>
@@ -35,6 +39,7 @@ const Projects = () => {
                   })}
                 </Stack>
               </article>
+
               <Image>
                 <img src={image} alt="" />
               </Image>

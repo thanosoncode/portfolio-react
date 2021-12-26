@@ -70,15 +70,15 @@ const Navbar = () => {
     getSettingsCoords();
   }, [index]);
 
-  const [pixels, setPixels] = useState();
+  // const [pixels, setPixels] = useState();
 
-  useEffect(() => {
-    const getWidth = () => setPixels(window.innerWidth);
+  // useEffect(() => {
+  //   const getWidth = () => setPixels(window.innerWidth);
 
-    window.addEventListener("resize", getWidth);
+  //   window.addEventListener("resize", getWidth);
 
-    return () => window.removeEventListener("resize", getWidth);
-  }, [pixels]);
+  //   return () => window.removeEventListener("resize", getWidth);
+  // }, [pixels]);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -107,12 +107,16 @@ const Navbar = () => {
         <span></span>
         <StyledSocials>
           <li>
-            <a href="https://github.com/thanosoncode?tab=repositories">
+            <a
+              href="https://github.com/thanosoncode?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaGithub />
             </a>
           </li>
           <li>
-            <a href="https://gr.linkedin.com/">
+            <a href="https://gr.linkedin.com/" target="_blank" rel="noreferrer">
               <FaLinkedin />
             </a>
           </li>
@@ -120,7 +124,6 @@ const Navbar = () => {
       </div>
       <Links>
         <ul>
-          <li>{pixels}</li>
           <li>
             <a href="#skills">Skills</a>
           </li>
@@ -138,16 +141,11 @@ const Navbar = () => {
           {isMenuOpen ? <AiOutlineClose /> : <HiOutlineMenuAlt4 />}
         </Hamburger>
       </Links>
-      {/* <MobileLinks>
-        <div>
-          <GoSettings />
-        </div>
-        
-      </MobileLinks> */}
 
       <MobileMenu
+        visibility={isMenuOpen ? "visible" : "hidden"}
         opacity={isMenuOpen ? "1" : "0"}
-        visibility={isMenuOpen ? "1" : "0"}
+        z={isMenuOpen ? "5" : "-5"}
       >
         <li onClick={handleLinkClick}>
           <a href="#skills">Skills</a>

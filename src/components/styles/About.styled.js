@@ -51,13 +51,22 @@ export const ImageContainer = styled.div`
   overflow: hidden;
   grid-area: image;
   min-width: 330px;
+  min-height: 500px;
+  position: relative;
+  z-index: 0;
 
   img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
     border-radius: ${({ theme }) => theme.radiusCard};
   }
+
   @media (max-width: 700px) {
     min-width: 384px;
     margin-bottom: 20px;
@@ -93,6 +102,7 @@ export const Header = styled.div`
   color: white;
   padding: 25px;
   font-size: ${({ theme }) => theme.headerSize};
+  line-height: 34px;
 `;
 
 export const SectionFooter = styled.p`

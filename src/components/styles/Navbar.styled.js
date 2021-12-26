@@ -4,7 +4,6 @@ export const StyledNavbar = styled.nav`
   max-width: 90vw;
   margin: 0 auto;
   padding: 25px 30px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +43,7 @@ export const Image = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
   }
 `;
 
@@ -215,11 +215,13 @@ export const MobileLinks = styled.div`
 
 export const MobileMenu = styled.ul`
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 100px;
   left: 0;
+  z-index: ${({ z }) => z};
   list-style: none;
+  background: white;
   background-color: ${({ theme }) => theme.bg};
   visibility: ${(props) => props.visibility};
   opacity: ${(props) => props.opacity};

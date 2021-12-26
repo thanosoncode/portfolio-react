@@ -18,6 +18,7 @@ export const StyledSkills = styled.div`
     padding: 0 15px;
   }
 `;
+
 export const Flex = styled.div`
   background-color: ${({ theme }) => theme.gray};
   border-radius: ${({ theme }) => theme.radiusCard};

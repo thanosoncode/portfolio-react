@@ -5,6 +5,15 @@ import atlas from "../assets/thumbs/atlas.jpg";
 
 export const projectsData = [
   {
+    name: "Morning Pages",
+    description:
+      "Recreated this full-stack app using React and Firebase back-end",
+    image: atlas,
+    stack: ["React", "Styled Components", "Firebase"],
+    source: "https://atlas-chania.netlify.app/",
+    code: "https://github.com/thanosoncode/morning-pages",
+  },
+  {
     name: "Atlas Chania",
     description: "Landing page of my favorite gym",
     image: atlas,
@@ -14,7 +23,8 @@ export const projectsData = [
   },
   {
     name: "All recipes",
-    description: "Extended use of TheMealDb API",
+    description:
+      "Built this responsive website that queries and tabulates data from an API based on user while getting familiar with NextJs and Styled Components",
     image: recipes,
     stack: ["NextJS", "Styled Components"],
     source: "https://nextjs-recipes.netlify.app/",
@@ -23,7 +33,7 @@ export const projectsData = [
   {
     name: "Gadgets",
     description:
-      "E-commerce section that allowed me to experiment with Context API and useReducer hook",
+      "E-commerce with mock up data as a practice to learn Context API and useReducer for state management",
     image: gadgets,
     stack: ["ReactJS", "CSS"],
     source: "https://react-gadgets.netlify.app",
@@ -32,7 +42,7 @@ export const projectsData = [
   {
     name: "Weather App",
     description:
-      "Any developer who respects himself has to have a weather app in their portfolio",
+      "At least once in your lifetime you have to build a weather app. A responsive single page application",
     image: weather,
     stack: ["ReactJS", "CSS"],
     source: "https://weather-thanos.netlify.app",

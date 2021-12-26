@@ -42,26 +42,33 @@ export const Card = styled.div`
   box-shadow: 0 0 10px gray;
 
   &:hover {
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 20px gray;
   }
 
   article {
     padding: 25px;
   }
+
   h1 {
     font-size: ${({ theme }) => theme.headerSize};
     margin-bottom: 10px;
   }
+
   p {
     margin-bottom: 10px;
     font-size: ${({ theme }) => theme.fontSize};
+    font-weight: normal;
   }
 `;
 
 export const Stack = styled.div`
   margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
   span {
-    margin-right: 15px;
     border-radius: 999px;
     background-color: ${({ theme }) => theme.gray};
     padding: 4px 12px;
@@ -69,10 +76,14 @@ export const Stack = styled.div`
   }
 `;
 
-export const Links = styled.ul`
+export const Links = styled.div`
   list-style: none;
   margin: 30px 0 40px 0;
   display: flex;
+
+  li {
+    transition: 0.3s ease;
+  }
 
   li a {
     color: ${({ theme }) => theme.accent};
@@ -80,19 +91,22 @@ export const Links = styled.ul`
     margin-right: 15px;
     font-size: ${({ theme }) => theme.fontSize};
   }
-
-  li:hover {
-    transform: scale(1.025);
-  }
 `;
 
 export const Image = styled.div`
   width: 100%;
   height: 250px;
+  overflow: hidden;
+
   img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
+    transition: 0.3s ease-out;
+  }
+
+  img:hover {
+    transform: rotate(45deg) scale(1.4);
   }
 `;
