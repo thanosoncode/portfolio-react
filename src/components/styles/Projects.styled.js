@@ -88,6 +88,7 @@ export const Stack = styled.div`
     font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize};
     color: ${({ theme }) => theme.title};
+    padding: 0 5px;
   }
 `;
 
@@ -109,6 +110,7 @@ export const Links = styled.div`
     text-align: center;
     border: 2px solid ${({ theme }) => theme.color};
     color: ${({ theme }) => theme.color};
+    margin: 0 5px;
   }
 
   a:hover {

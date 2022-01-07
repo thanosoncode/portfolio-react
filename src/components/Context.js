@@ -16,7 +16,7 @@ export const AppContextProvider = ({ children }) => {
 
   const mainTitleSizes = ["50px", "52px", "54px"];
 
-  const links = ["21px", "23px", "25px"];
+  const links = ["20px", "22px", "24px"];
 
   const dayTheme = {
     color: "#242424",

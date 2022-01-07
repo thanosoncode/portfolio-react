@@ -119,11 +119,9 @@ export const Header = styled.div`
 export const SectionFooter = styled.p`
   grid-area: footer;
 
-  p {
-    margin-top: -20px;
-    line-height: 28px;
-    text-align: justify;
-  }
+  margin-top: -20px;
+  line-height: 28px;
+  text-align: justify;
 
   a {
     font-weight: 600;

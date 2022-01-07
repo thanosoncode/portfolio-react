@@ -123,7 +123,7 @@ export const Links = styled.div`
   }
   @media (max-width: 700px) {
     span {
-      margin-left:10px;
+      margin-left:20px;
     }
 
     span:last-child{

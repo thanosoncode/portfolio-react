@@ -14,7 +14,7 @@ const About = () => {
     <StyledAbout>
       <header>
         <h1>Hi, I&#39;m Thanos </h1>
-        <span>👋</span>
+        {/* <span>👋</span> */}
       </header>
       <Grid>
         <ImageContainer>
@@ -42,28 +42,26 @@ const About = () => {
           </p>
         </Article>
         <SectionFooter>
-          <p>
-            Currently, I enjoy working with React and Styled Components having
-            things nice and organized and implement best practices. Take a look
-            at my <a href="#skills">skills</a> and some of my most recent{" "}
-            <a href="#projects">projects</a> below. Here&#39;s my{" "}
-            <a href={pdf} target="_blank" rel="noreferrer">
-              resume
-            </a>
-            , my{" "}
-            <a
-              href="https://github.com/thanosoncode?tab=repositories"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn{" "}
-            </a>
-            Profile, and my{" "}
-            <a href="https://gr.linkedin.com/" target="_blank" rel="noreferrer">
-              GitHub
-            </a>{" "}
-            Repositories.
-          </p>
+          Currently, I enjoy working with React and Styled Components having
+          things nice and organized and implement best practices. Take a look at
+          my <a href="#skills">skills</a> and some of my most recent{" "}
+          <a href="#projects">projects</a> below. Here&#39;s my{" "}
+          <a href={pdf} target="_blank" rel="noreferrer">
+            resume
+          </a>
+          , my{" "}
+          <a
+            href="https://github.com/thanosoncode?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn{" "}
+          </a>
+          Profile, and my{" "}
+          <a href="https://gr.linkedin.com/" target="_blank" rel="noreferrer">
+            GitHub
+          </a>{" "}
+          Repositories.
         </SectionFooter>
       </Grid>
     </StyledAbout>
