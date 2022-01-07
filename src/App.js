@@ -1,5 +1,4 @@
 import { ThemeProvider } from "styled-components";
-import { AppContainer } from "./components/styles/App.styled";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -15,14 +14,12 @@ function App() {
     <ThemeProvider theme={nightMode ? nightTheme : dayTheme}>
       <>
         <GlobalStyles />
-        <AppContainer>
-          <Navbar />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-          <Footer />
-        </AppContainer>
+        <Navbar />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
       </>
     </ThemeProvider>
   );

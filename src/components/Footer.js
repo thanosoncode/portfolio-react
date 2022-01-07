@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
-      <p>&copy;&nbsp; 2021 &nbsp; Thanos</p>
+      <p>&copy;&nbsp; 2021 &nbsp; Thanos Chrysanthopoulos</p>
     </StyledFooter>
   );
 };

@@ -1,8 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { GoSettings } from "react-icons/go";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { AiOutlineClose } from "react-icons/ai";
 import {
   StyledNavbar,
   Image,
@@ -13,7 +11,7 @@ import {
   Letter,
   Triangle,
   MobileMenu,
-  Hamburger,
+  Container,
 } from "./styles/Navbar.styled.js";
 import logo from "../assets/profile.png";
 import { useGlobalContext } from "./Context.js";
@@ -72,108 +70,92 @@ const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleMenuClick = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-      setOverflow("auto");
-    }
-    if (!isMenuOpen) {
-      setIsMenuOpen(true);
-      setOverflow("hidden");
-    }
-  };
-
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     setOverflow("auto");
   };
 
   return (
-    <StyledNavbar position={isMenuOpen ? "fixed" : "static"}>
-      <div>
-        <Image>
-          <img src={logo} alt="" />
-        </Image>
-        <span></span>
-        <StyledSocials>
-          <li>
-            <a
-              href="https://github.com/thanosoncode?tab=repositories"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub />
-            </a>
-          </li>
-          <li>
-            <a href="https://gr.linkedin.com/" target="_blank" rel="noreferrer">
-              <FaLinkedin />
-            </a>
-          </li>
-        </StyledSocials>
-      </div>
-      <Links>
-        <ul>
-          <li>
+    <Container>
+      <StyledNavbar>
+        <div>
+          <Image>
+            <img src={logo} alt="" />
+          </Image>
+          <p></p>
+          <StyledSocials>
+            <li>
+              <a
+                href="https://github.com/thanosoncode?tab=repositories"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://gr.linkedin.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin />
+              </a>
+            </li>
+          </StyledSocials>
+        </div>
+        <Links>
+          <span ref={settings} onClick={handleSettingsClick}>
+            <GoSettings />
+          </span>
+          <span>
+            <a href="#contact">Contact me</a>
+          </span>
+        </Links>
+
+        <MobileMenu
+          visibility={isMenuOpen ? "visible" : "hidden"}
+          opacity={isMenuOpen ? "1" : "0"}
+          z={isMenuOpen ? "5" : "-5"}
+        >
+          <li onClick={handleLinkClick}>
             <a href="#skills">Skills</a>
           </li>
-          <li>
+          <li onClick={handleLinkClick}>
             <a href="#projects">Projects</a>
           </li>
-          <li>
+          <li onClick={handleLinkClick}>
             <a href="#contact">Contact</a>
           </li>
-        </ul>
-        <li ref={settings} onClick={handleSettingsClick}>
-          <GoSettings />
-        </li>
-        <Hamburger onClick={handleMenuClick}>
-          {isMenuOpen ? <AiOutlineClose /> : <HiOutlineMenuAlt4 />}
-        </Hamburger>
-      </Links>
+        </MobileMenu>
 
-      <MobileMenu
-        visibility={isMenuOpen ? "visible" : "hidden"}
-        opacity={isMenuOpen ? "1" : "0"}
-        z={isMenuOpen ? "5" : "-5"}
-      >
-        <li onClick={handleLinkClick}>
-          <a href="#skills">Skills</a>
-        </li>
-        <li onClick={handleLinkClick}>
-          <a href="#projects">Projects</a>
-        </li>
-        <li onClick={handleLinkClick}>
-          <a href="#contact">Contact</a>
-        </li>
-      </MobileMenu>
-
-      <Modal
-        visibility={isSettingsOpen ? "visible" : "hidden"}
-        opacity={isSettingsOpen ? "1" : "0"}
-        left={fromLeft}
-        top={fromTop}
-        ref={modal}
-        onMouseEnter={() => setIsMouseOver(true)}
-        onMouseLeave={() => setIsMouseOver(false)}
-      >
-        <section>
-          <p>Night Mode</p>
-          <SwitchContainer
-            color={nightMode ? "#006AFF" : "#777"}
-            move={nightMode ? "translateX(100%)" : "translateX(0)"}
-            onClick={handleModeClick}
-          >
-            <div></div>
-          </SwitchContainer>
-        </section>
-        <section>
-          <p>Text size</p>
-          <Letter onClick={handleFontSizeClick}>A</Letter>
-        </section>
-        <Triangle></Triangle>
-      </Modal>
-    </StyledNavbar>
+        <Modal
+          visibility={isSettingsOpen ? "visible" : "hidden"}
+          opacity={isSettingsOpen ? "1" : "0"}
+          left={fromLeft}
+          top={fromTop}
+          ref={modal}
+          onMouseEnter={() => setIsMouseOver(true)}
+          onMouseLeave={() => setIsMouseOver(false)}
+        >
+          <section>
+            <h5>Night Mode</h5>
+            <SwitchContainer
+              color={nightMode ? "#006AFF" : "#777"}
+              move={nightMode ? "translateX(100%)" : "translateX(0)"}
+              onClick={handleModeClick}
+            >
+              <div></div>
+            </SwitchContainer>
+          </section>
+          <section>
+            <h5>Text size</h5>
+            <Letter onClick={handleFontSizeClick}>A</Letter>
+          </section>
+          <Triangle></Triangle>
+        </Modal>
+      </StyledNavbar>
+    </Container>
   );
 };
 

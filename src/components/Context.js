@@ -8,15 +8,15 @@ export const AppContextProvider = ({ children }) => {
 
   const [overflow, setOverflow] = useState("auto");
 
-  const fontSizes = ["16px", "17px", "18px"];
+  const fontSizes = ["17px", "17px", "19px"];
 
   const titleSizes = ["23px", "24px", "25px"];
 
   const headerSizes = ["19px", "20px", "21px"];
 
-  const mainTitleSizes = ["48px", "49px", "50px"];
+  const mainTitleSizes = ["50px", "52px", "54px"];
 
-  const links = ["26px", "28px", "30px"];
+  const links = ["21px", "23px", "25px"];
 
   const dayTheme = {
     color: "#242424",
@@ -25,8 +25,6 @@ export const AppContextProvider = ({ children }) => {
     modal: "white",
     title: "black",
     header: "#242424",
-    accent: "	hsl(215, 60%, 50%)",
-    green: "#28A6A7",
     accentLight: "hsl(215, 100%, 90%)",
     inputs: "white",
     gray: "white",
@@ -47,8 +45,6 @@ export const AppContextProvider = ({ children }) => {
     modal: "#444",
     title: "#d3d3d3",
     header: "#939393",
-    accent: "	hsl(215, 60%, 50%)",
-    green: "#28A6A7",
     accentLight: "#232222",
     inputs: "#ccc",
     gray: "#444",

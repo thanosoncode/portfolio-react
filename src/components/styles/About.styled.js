@@ -2,13 +2,16 @@ import styled from "styled-components";
 
 export const StyledAbout = styled.section`
   max-width: 740px;
-  margin: 40px auto;
+  margin: 140px auto 40px auto;
 
   header {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    @media (max-width: 450px) {
+      flex-direction: column;
+    }
   }
 
   h1 {
@@ -17,6 +20,7 @@ export const StyledAbout = styled.section`
     font-family: "Play", sans-serif;
     font-size: ${({ theme }) => theme.mainTitle};
   }
+
   span {
     font-size: ${({ theme }) => theme.mainTitle};
     margin-left: 10px;
@@ -71,6 +75,10 @@ export const ImageContainer = styled.div`
     min-width: 384px;
     margin-bottom: 20px;
   }
+  @media (max-width: 400px) {
+    min-width: 354px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Article = styled.section`
@@ -79,10 +87,12 @@ export const Article = styled.section`
   h2 {
     color: ${({ theme }) => theme.title};
     font-size: ${({ theme }) => theme.titleSize};
+    text-align: center;
   }
   p {
     margin: 10px 0;
     line-height: 28px;
+    text-align: justify;
   }
   @media (max-width: 700px) {
     p {
@@ -103,11 +113,21 @@ export const Header = styled.div`
   padding: 25px;
   font-size: ${({ theme }) => theme.headerSize};
   line-height: 34px;
+  text-align: center;
 `;
 
 export const SectionFooter = styled.p`
   grid-area: footer;
-  @media (max-width: 700px) {
-    min-width: 384px;
+
+  p {
+    margin-top: -20px;
+    line-height: 28px;
+    text-align: justify;
+  }
+
+  a {
+    font-weight: 600;
+    cursor: pointer;
+    color: ${({ theme }) => theme.color};
   }
 `;

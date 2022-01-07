@@ -2,11 +2,17 @@ import styled from "styled-components";
 
 export const ContactContainer = styled.div`
   max-width: 740px;
-  margin: 120px auto;
-
+  margin: 120px auto 60px auto;
   background-color: ${({ theme }) => theme.accentLight};
   padding: 70px 90px;
   border-radius: ${({ theme }) => theme.radiusCard};
+
+  h4 {
+    color: ${({ theme }) => theme.title};
+    font-weight: 800;
+    font-size: ${({ theme }) => theme.titleSize};
+  }
+
   p {
     margin: 15px 0 20px 0;
   }
@@ -87,8 +93,11 @@ export const StyledModal = styled.div`
       text-align:center;
       padding:40px 60px;
       transition:0.3s ease;
+      
       /* box-shadow: 0 0 8px #ddd; */
-
+h4{
+  color:black;
+}
       &:hover {
         box-shadow: 0 0 3px #ddd;
       }
@@ -96,5 +105,6 @@ export const StyledModal = styled.div`
       button{
         padding:6px 14px;
         margin-top:20px;
+        background-color:black;
       }
 `;

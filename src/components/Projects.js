@@ -11,7 +11,12 @@ import { projectsData } from "./projectsData";
 const Projects = () => {
   return (
     <ProjectsContainer id="projects">
-      <p>My projects</p>
+      <h5>My projects</h5>
+      <p>
+        These are all self-directed projects in order to get myself familiar
+        with different concepts. <br />
+        <a href="/">Let me know if you have any questions!</a>
+      </p>
       <Grid>
         {projectsData.map((item, index) => {
           const { name, description, stack, source, code, image } = item;

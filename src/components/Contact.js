@@ -36,10 +36,10 @@ const Contact = () => {
           }
         );
       e.target.reset();
-      setMessage("Message sent! We will be in touch soon.");
+      setMessage("Thank you for your message! We will be in touch soon.");
       setMessageSent(true);
     } else {
-      setMessage("Message cannot be empty");
+      setMessage("Message cannot be empty.");
       setMessageSent(true);
     }
   };
@@ -47,11 +47,11 @@ const Contact = () => {
   return (
     <ContactContainer id="contact">
       <Form onSubmit={sendEmail}>
-        <h4>Let&#39;s get in touch.</h4>
+        <h4>Let&#39;s talk!</h4>
         <p>
-          Would be happy to help you with your project or your organization,
-          feel free to share your ideas and we will discuss how we can make them
-          true.
+          I would be happy to help you with your project or your organization,
+          or answer any of your questions! Please, share your ideas and we will
+          figure out how we can make them true.
         </p>
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />

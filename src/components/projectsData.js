@@ -2,15 +2,16 @@ import recipes from "../assets/thumbs/recipes.png";
 import gadgets from "../assets/thumbs/gadgets.jpg";
 import weather from "../assets/thumbs/weather.png";
 import atlas from "../assets/thumbs/atlas.jpg";
+import morning from "../assets/thumbs/morning.png";
 
 export const projectsData = [
   {
     name: "Morning Pages",
     description:
-      "Recreated this full-stack app using React and Firebase back-end",
-    image: atlas,
+      "Recreated this full-stack app using React, Styled Components and Firebase back-end",
+    image: morning,
     stack: ["React", "Styled Components", "Firebase"],
-    source: "https://atlas-chania.netlify.app/",
+    source: "https://react-morning-pages.netlify.app/",
     code: "https://github.com/thanosoncode/morning-pages",
   },
   {

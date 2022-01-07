@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledSkills = styled.div`
   max-width: 740px;
-  margin: 80px auto 120px auto;
+  margin: 80px auto 90px auto;
 
   p {
     margin: 40px 0;
@@ -14,6 +14,9 @@ export const StyledSkills = styled.div`
     margin-bottom: 30px;
   }
 
+  & > p {
+    font-size: ${({ theme }) => theme.titleSize};
+  }
   @media (max-width: 800px) {
     padding: 0 15px;
   }

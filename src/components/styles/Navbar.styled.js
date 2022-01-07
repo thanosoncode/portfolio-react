@@ -1,5 +1,15 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  width: 100vw;
+  margin: 0 auto;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: ${({ theme }) => theme.bg};
+`;
+
 export const StyledNavbar = styled.nav`
   max-width: 90vw;
   margin: 0 auto;
@@ -14,7 +24,7 @@ export const StyledNavbar = styled.nav`
     align-items: center;
   }
 
-  span {
+  p {
     background-color: #ddd;
     height: 30px;
     width: 1px;
@@ -56,7 +66,7 @@ export const StyledSocials = styled.ul`
   li {
     padding: 5px;
     cursor: pointer;
-    font-size: ${({ theme }) => theme.fontSize};
+    font-size: ${({ theme }) => theme.links};
   }
 
   li a {
@@ -67,55 +77,58 @@ export const StyledSocials = styled.ul`
     opacity: 0.8;
     transition: transform 0.3s ease-in;
   }
-  @media (max-width: 700px) {
-    li {
-      font-size: ${({ theme }) => theme.links};
-    }
-  }
 `;
-export const Links = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @media (max-width: 700px) {
-      display: none;
-    }
-  }
-  li {
+export const Links = styled.div`
+
+  span {
     margin-left: 30px;
     cursor: pointer;
     font-weight: 500;
     transition: transform 0.3s ease-in;
-    font-size: ${({ theme }) => theme.fontSize};
+    font-size: ${({ theme }) => theme.links};
+   
   }
 
-  li a {
+  span:last-child{
+    padding:3px 13px;
+    border: 2px solid ${({ theme }) => theme.color};
     color: ${({ theme }) => theme.color};
+    border-radius:999px;
+    transition:0.3s ease;
+    display:flex;
+    justify-content:center;
+    align-items:center;
   }
 
-  li:hover {
+  span:last-child:hover{
+    border:2px solid ${({ theme }) => theme.color};
+    background-color: ${({ theme }) => theme.color};
+    color: ${({ theme }) => theme.bg};;
+  }
+ 
+  span a {
+    color: ${({ theme }) => theme.color};
+    
+  } 
+
+  span a:hover {
+    color:white;
+  }
+
+  span:hover {
     opacity: 0.8;
-  }
+  } 
 
   }
   @media (max-width: 700px) {
-    li {
-      font-size: ${({ theme }) => theme.links};
+    span {
+      margin-left:10px;
     }
-  }
-`;
 
-export const Hamburger = styled.li`
-  display: none;
-  @media (max-width: 700px) {
-    display: block;
+    span:last-child{
+      padding:3px 8px;
+    }
   }
 `;
 
@@ -148,7 +161,7 @@ export const Modal = styled.div`
     border-bottom: 1px solid #aaa;
   }
 
-  p {
+  h5 {
     font-weight: 400;
     font-size: 0.9rem;
   }

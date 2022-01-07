@@ -4,6 +4,7 @@ import js from "../assets/js.png";
 import react from "../assets/react.jpg";
 import next from "../assets/next.png";
 import styled from "../assets/styled.jfif";
+import firebase from "../assets/firebase.png";
 import { StyledSkills, Flex, Image } from "./styles/Skills.styled";
 
 const stack = [
@@ -13,6 +14,7 @@ const stack = [
   { name: "React", image: react },
   { name: "Next.js", image: next },
   { name: "Styled Comp", image: styled },
+  { name: "Firebase", image: firebase },
 ];
 
 const Skills = () => {

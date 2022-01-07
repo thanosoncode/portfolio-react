@@ -4,12 +4,22 @@ export const ProjectsContainer = styled.div`
   max-width: 740px;
   margin: 0 auto;
 
-  p {
-    margin: 30px 0;
+  h5 {
+    margin: 30px 0 50px 0;
     color: ${({ theme }) => theme.title};
     font-weight: 800;
+    font-size: ${({ theme }) => theme.titleSize};
   }
 
+  p {
+    font-size: ${({ theme }) => theme.fontSize};
+    margin-bottom: 60px;
+  }
+
+  a {
+    color: ${({ theme }) => theme.color};
+    font-weight: 600;
+  }
   @media (max-width: 800px) {
     padding: 0 15px;
   }
@@ -37,21 +47,24 @@ export const Card = styled.div`
   overflow: hidden;
   transition: 0.3s ease;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column-reverse;
   box-shadow: 0 0 10px gray;
 
-  /* &:hover {
-    box-shadow: 0 0 20px gray;
-  } */
-
   article {
-    padding: 25px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 60%;
   }
 
   h1 {
     font-size: ${({ theme }) => theme.headerSize};
     margin-bottom: 10px;
+    color: ${({ theme }) => theme.title};
   }
 
   p {
@@ -59,6 +72,7 @@ export const Card = styled.div`
     font-weight: normal;
     min-height: 83.2px;
     margin: 10px 0 20px 0;
+    text-align: center;
   }
 `;
 
@@ -71,10 +85,9 @@ export const Stack = styled.div`
   gap: 15px;
 
   span {
-    border-radius: 999px;
-    background-color: ${({ theme }) => theme.gray};
     font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize};
+    color: ${({ theme }) => theme.title};
   }
 `;
 
@@ -94,24 +107,13 @@ export const Links = styled.div`
     font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize};
     text-align: center;
-    border: 2px solid ${({ theme }) => theme.accent};
-    color: ${({ theme }) => theme.accent};
+    border: 2px solid ${({ theme }) => theme.color};
+    color: ${({ theme }) => theme.color};
   }
 
   a:hover {
-    background: ${({ theme }) => theme.accent};
+    background: ${({ theme }) => theme.color};
     color: white;
-  }
-
-  a:last-child:hover {
-    background: ${({ theme }) => theme.green};
-    color: white;
-    border: 2px solid ${({ theme }) => theme.green};
-  }
-
-  a:last-child {
-    border: 2px solid ${({ theme }) => theme.green};
-    color: ${({ theme }) => theme.green};
   }
 `;
 
@@ -125,6 +127,7 @@ export const Image = styled.div`
     height: 100%;
     display: block;
     object-fit: cover;
+
     transition: 0.3s ease-out;
   }
 
