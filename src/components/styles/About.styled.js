@@ -127,5 +127,10 @@ export const SectionFooter = styled.p`
     font-weight: 600;
     cursor: pointer;
     color: ${({ theme }) => theme.color};
+    text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 0;
   }
 `;

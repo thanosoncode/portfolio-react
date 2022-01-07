@@ -55,8 +55,8 @@ const About = () => {
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn{" "}
-          </a>
+            LinkedIn
+          </a>{" "}
           Profile, and my{" "}
           <a href="https://gr.linkedin.com/" target="_blank" rel="noreferrer">
             GitHub

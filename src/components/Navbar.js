@@ -95,7 +95,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="https://gr.linkedin.com/"
+                href="https://www.linkedin.com/in/thanos-chrysanthopoulos/"
                 target="_blank"
                 rel="noreferrer"
               >
