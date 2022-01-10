@@ -49,9 +49,10 @@ const Contact = () => {
       <Form onSubmit={sendEmail}>
         <h4>Let&#39;s talk!</h4>
         <p>
-          I would be happy to help you with your project or your organization,
-          or answer any of your questions! Please, share your ideas and we will
-          figure out how we can make them true.
+          I would be happy to help you with your organization or your project,
+          or answer any of your questions!
+          <br /> <br /> Please, share your ideas and we will figure out how we
+          can make them true.
         </p>
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />

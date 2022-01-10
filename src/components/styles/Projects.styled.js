@@ -77,7 +77,7 @@ export const Card = styled.div`
 `;
 
 export const Stack = styled.div`
-  margin: 5px 0;
+  margin: 5px 0 35px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

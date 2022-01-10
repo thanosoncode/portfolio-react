@@ -14,6 +14,7 @@ function App() {
     <ThemeProvider theme={nightMode ? nightTheme : dayTheme}>
       <>
         <GlobalStyles />
+
         <Navbar />
         <About />
         <Skills />

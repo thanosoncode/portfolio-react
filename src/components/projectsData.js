@@ -8,15 +8,16 @@ export const projectsData = [
   {
     name: "Morning Pages",
     description:
-      "Recreated this full-stack app using React, Styled Components and Firebase back-end",
+      "Full-stack app using React, Styled Components and Firebase back-end",
     image: morning,
     stack: ["React", "Styled Components", "Firebase"],
     source: "https://react-morning-pages.netlify.app/",
     code: "https://github.com/thanosoncode/morning-pages",
   },
   {
-    name: "Atlas Chania",
-    description: "Landing page of my favorite gym",
+    name: "Gym Website",
+    description:
+      "Responsive landing page; includes gallery, carousel,  mapbox map and contact form",
     image: atlas,
     stack: ["NextJS", "CSS"],
     source: "https://atlas-chania.netlify.app/",
@@ -25,7 +26,7 @@ export const projectsData = [
   {
     name: "All recipes",
     description:
-      "Built this responsive website that queries and tabulates data from an API based on user while getting familiar with NextJs and Styled Components",
+      "Responsive website that queries and tabulates data from an API based on search parameters",
     image: recipes,
     stack: ["NextJS", "Styled Components"],
     source: "https://nextjs-recipes.netlify.app/",
@@ -43,7 +44,7 @@ export const projectsData = [
   {
     name: "Weather App",
     description:
-      "At least once in your lifetime you have to build a weather app. A responsive single page application",
+      "At least once in your life you have to build a weather app. A responsive single page application",
     image: weather,
     stack: ["ReactJS", "CSS"],
     source: "https://weather-thanos.netlify.app",
