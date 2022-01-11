@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import GlobalStyles from "./components/styles/Global";
 import Footer from "./components/Footer";
-import { useGlobalContext } from "./components/Context";
+import { useGlobalContext } from "./context";
 
 function App() {
   const { dayTheme, nightTheme, nightMode } = useGlobalContext();
@@ -14,7 +14,6 @@ function App() {
     <ThemeProvider theme={nightMode ? nightTheme : dayTheme}>
       <>
         <GlobalStyles />
-
         <Navbar />
         <About />
         <Skills />

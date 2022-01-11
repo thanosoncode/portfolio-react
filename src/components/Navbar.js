@@ -14,7 +14,7 @@ import {
   Container,
 } from "./styles/Navbar.styled.js";
 import logo from "../assets/profile.png";
-import { useGlobalContext } from "./Context.js";
+import { useGlobalContext } from "../context.js";
 
 const Navbar = () => {
   const { nightMode, setNightMode, index, setIndex, setOverflow } =
