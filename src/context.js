@@ -29,7 +29,7 @@ export const AppContextProvider = ({ children }) => {
     inputs: "white",
     gray: "white",
     radiusCard: "15px",
-    radiusBtn: "4px",
+    radiusBtn: "10px",
     fontSize: fontSizes[index],
     titleSize: titleSizes[index],
     headerSize: headerSizes[index],

@@ -6,7 +6,7 @@ import {
   Stack,
   Image,
 } from "./styles/Projects.styled.js";
-import { projectsData } from "./projectsData";
+import { projectsData } from "../projectsData";
 
 const Projects = () => {
   return (

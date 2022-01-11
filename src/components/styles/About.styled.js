@@ -28,6 +28,7 @@ export const StyledAbout = styled.section`
 
   @media (max-width: 800px) {
     padding: 0 15px;
+    margin: 100px auto 40px auto;
   }
 `;
 

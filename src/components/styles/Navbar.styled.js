@@ -31,7 +31,7 @@ export const StyledNavbar = styled.nav`
     margin: 0 5px;
   }
   @media (max-width: 600px) {
-    padding: 15px;
+    padding: 10px 15px;
     max-width: 100vw;
   }
 `;

@@ -1,8 +1,8 @@
-import recipes from "../assets/thumbs/recipes.png";
-import gadgets from "../assets/thumbs/gadgets.jpg";
-import weather from "../assets/thumbs/weather.png";
-import atlas from "../assets/thumbs/atlas.jpg";
-import morning from "../assets/thumbs/morning.png";
+import recipes from "./assets/thumbs/recipes.png";
+import gadgets from "./assets/thumbs/gadgets.jpg";
+import weather from "./assets/thumbs/weather.png";
+import atlas from "./assets/thumbs/atlas.jpg";
+import morning from "./assets/thumbs/morning.png";
 
 export const projectsData = [
   {

@@ -67,6 +67,7 @@ export const Button = styled.button`
   transition: 0.3s ease;
   font-size: ${({ theme }) => theme.fontSize};
   border-radius: ${({ theme }) => theme.radiusBtn};
+  font-weight: 600;
   &:hover {
     background-color: ${({ theme }) => theme.colorLight};
   }
