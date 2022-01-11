@@ -54,8 +54,8 @@ const Contact = () => {
           <br /> <br /> Please, share your ideas and we will figure out how we
           can make them true.
         </p>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Name" required name="name" />
+        <input type="email" placeholder="Email" required name="email" />
         <textarea
           name="message"
           id="message"
