@@ -15,6 +15,15 @@ export const projectsData = [
     code: "https://github.com/thanosoncode/morning-pages",
   },
   {
+    name: "Gadgets",
+    description:
+      "E-commerce with mock up data as a practice to learn Context API and useReducer for state management",
+    image: gadgets,
+    stack: ["ReactJS", "CSS"],
+    source: "https://react-gadgets.netlify.app",
+    code: "https://github.com/thanosoncode/next-recipes",
+  },
+  {
     name: "Gym Website",
     description:
       "Responsive landing page; includes gallery, carousel,  mapbox map and contact form",
@@ -32,15 +41,7 @@ export const projectsData = [
     source: "https://nextjs-recipes.netlify.app/",
     code: "https://github.com/thanosoncode/themealdb",
   },
-  {
-    name: "Gadgets",
-    description:
-      "E-commerce with mock up data as a practice to learn Context API and useReducer for state management",
-    image: gadgets,
-    stack: ["ReactJS", "CSS"],
-    source: "https://react-gadgets.netlify.app",
-    code: "https://github.com/thanosoncode/next-recipes",
-  },
+
   {
     name: "Weather App",
     description:

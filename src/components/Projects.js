@@ -31,12 +31,11 @@ const Projects = () => {
                   })}
                 </Stack>
                 <Links>
-                  <a href={source} target="_blank" rel="noreferrer">
-                    View Demo
-                  </a>
-
                   <a href={code} target="_blank" rel="noreferrer">
                     View Code
+                  </a>
+                  <a href={source} target="_blank" rel="noreferrer">
+                    View Demo
                   </a>
                 </Links>
               </article>

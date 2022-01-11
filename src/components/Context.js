@@ -8,7 +8,7 @@ export const AppContextProvider = ({ children }) => {
 
   const [overflow, setOverflow] = useState("auto");
 
-  const fontSizes = ["17px", "17px", "19px"];
+  const fontSizes = ["17px", "18px", "19px"];
 
   const titleSizes = ["23px", "24px", "25px"];
 

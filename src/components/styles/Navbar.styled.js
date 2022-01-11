@@ -99,6 +99,7 @@ export const Links = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    font-size: ${({ theme }) => theme.fontSize};
   }
 
   span:last-child:hover{

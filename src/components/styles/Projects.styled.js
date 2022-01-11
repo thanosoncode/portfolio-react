@@ -39,6 +39,12 @@ export const Grid = styled.section`
   @media (max-width: 700px) {
     gap: 80px;
   }
+
+  @media (max-width: 500px) {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: calc(100vh - 90px);
+  }
 `;
 
 export const Card = styled.div`
@@ -73,6 +79,11 @@ export const Card = styled.div`
     min-height: 83.2px;
     margin: 10px 0 20px 0;
     text-align: center;
+  }
+
+  @media (max-width: 500px) {
+    scroll-snap-align: start;
+    height: calc(100vh - 90px);
   }
 `;
 

@@ -39,6 +39,7 @@ export const Form = styled.form`
     border: 1px solid ${({ theme }) => theme.color};
     border-radius: ${({ theme }) => theme.radiusBtn};
     background-color: ${({ theme }) => theme.inputs};
+    font-size: ${({ theme }) => theme.fontSize};
   }
 
   input,
@@ -64,7 +65,7 @@ export const Button = styled.button`
   cursor: pointer;
   border: none;
   transition: 0.3s ease;
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fontSize};
   border-radius: ${({ theme }) => theme.radiusBtn};
   &:hover {
     background-color: ${({ theme }) => theme.colorLight};
