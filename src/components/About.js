@@ -7,7 +7,7 @@ import {
   SectionFooter,
 } from "./styles/About.styled.js";
 import logo from "../assets/profile1.png";
-import pdf from "../assets/resume.pdf";
+import pdf from "../assets/ChrysanthopoulosThanos.pdf";
 
 const About = () => {
   return (

@@ -14,7 +14,7 @@ export const AppContextProvider = ({ children }) => {
 
   const headerSizes = ["19px", "20px", "21px"];
 
-  const mainTitleSizes = ["50px", "52px", "54px"];
+  const mainTitleSizes = ["60px", "64px", "68px"];
 
   const links = ["20px", "22px", "24px"];
 
