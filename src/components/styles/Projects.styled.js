@@ -9,6 +9,7 @@ export const ProjectsContainer = styled.div`
     color: ${({ theme }) => theme.title};
     font-weight: 800;
     font-size: ${({ theme }) => theme.titleSize};
+    text-align: center;
   }
 
   p {
@@ -44,13 +45,13 @@ export const Grid = styled.section`
 export const Card = styled.div`
   border-radius: ${({ theme }) => theme.radiusCard};
   border: 1px solid #999;
+  box-shadow: 0 0 10px gray;
   overflow: hidden;
   transition: 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column-reverse;
-  box-shadow: 0 0 10px gray;
 
   article {
     padding: 15px;

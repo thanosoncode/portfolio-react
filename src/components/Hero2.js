@@ -12,16 +12,11 @@ const Hero = () => {
           <img src={logo} alt="" />
         </ImageContainer>
         <Header>
-          <h4>Hi, I'm Thanos!</h4>
-          <h1>
-            Frontend <br />
-            Web Developer
-          </h1>
+          {/* <h4>Hi, I'm Thanos!</h4> */}
+          <h1>Front-end Web Developer</h1>
           <h5>
-            I&#39;m frontend web developer <br />
-            located in Athens, GR
-            <br />
-            building sleek web apps!
+            I&#39;m front-end web developer located in Athens, GR building sleek
+            web apps!
           </h5>
         </Header>
       </Flex>

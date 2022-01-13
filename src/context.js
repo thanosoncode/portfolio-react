@@ -21,9 +21,10 @@ export const AppContextProvider = ({ children }) => {
   const dayTheme = {
     color: "#242424",
     colorLight: "hsl(0, 0%, 24%)",
+    blackWhite: "black",
     bg: "white",
+    title: "#242424",
     modal: "white",
-    title: "black",
     header: "#242424",
     accentLight: "hsl(215, 100%, 90%)",
     inputs: "white",

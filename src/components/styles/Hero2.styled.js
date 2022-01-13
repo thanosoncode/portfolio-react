@@ -1,27 +1,44 @@
 import styled from "styled-components";
 
 export const Flex = styled.div`
-  max-width: 740px;
+  max-width: 900px;
   margin: 90px auto 0 auto;
-  height: calc(100vh - 200px);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0px;
-  margin: 200px auto 0 auto;
+  height: calc(100vh - 90px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+
+  place-items: center;
+  grid-template-areas: "image header header header";
+
+  @media (max-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+
+    height: auto;
+    grid-template-areas:
+      "header"
+      "image";
+    gap: 10px;
+  }
 `;
 
 export const Header = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid black;
-  border-radius: ${({ theme }) => theme.radiusCard};
+  /* border: 2px solid ${({ theme }) => theme.header};
+  border-radius: ${({ theme }) => theme.radiusCard}; */
   height: 450px;
-  width: 330px;
+  width: 100%;
   padding: 10px;
   margin: 0;
+  text-align: center;
+  grid-area: header;
 
   h4 {
     font-size: ${({ theme }) => theme.titleSize};
@@ -30,47 +47,59 @@ export const Header = styled.header`
 
   h1 {
     font-size: ${({ theme }) => theme.mainTitle};
+    color: ${({ theme }) => theme.title};
+    margin-bottom: 50px;
+    width: 100%;
+    font-weight: 800;
   }
 
   h5 {
-    font-size: ${({ theme }) => theme.headerSize};
+    font-size: ${({ theme }) => theme.titleSize};
     font-weight: 400;
     width: 100%;
     margin-bottom: 20px;
-    /* border-radius: ${({ theme }) => theme.radiusCard};
-    color: white;
-    background: black;
-    padding: 5px; */
   }
 `;
 
 export const ImageContainer = styled.div`
   border-radius: ${({ theme }) => theme.radiusCard};
   overflow: hidden;
-  height: 450px;
+  grid-area: image;
   width: 330px;
-  /* min-height: 450px;  */
+  height: 450px;
   position: relative;
   z-index: 0;
+  filter: grayscale(10%);
+  background: black;
+
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
 
   img {
     position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
+    /* top: 0;
+    left: 0; */
+    left: 40px;
+    top: -40px;
+    /* width: 100%; */
+
     height: auto;
     object-fit: contain;
     object-position: center;
     border-radius: ${({ theme }) => theme.radiusCard};
+
+    @media (max-width: 720px) {
+      left: 40px;
+      top: -40px;
+    }
   }
 
-  @media (max-width: 700px) {
-    min-width: 384px;
-    margin-bottom: 20px;
-  }
-  @media (max-width: 400px) {
-    min-width: 354px;
-    margin-bottom: 20px;
+  @media (max-width: 720px) {
+    grid-row: 2;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
   }
 `;

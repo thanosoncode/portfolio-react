@@ -44,6 +44,8 @@ export const Image = styled.div`
 
   transition: transform 0.3s ease-in;
   cursor: pointer;
+  position: relative;
+  background: black;
 
   &:hover {
     transform: scale(1.05);
@@ -54,6 +56,9 @@ export const Image = styled.div`
     height: 100%;
     object-fit: cover;
     object-position: top;
+    position: absolute;
+    top: -5px;
+    left: 10px;
   }
 `;
 

@@ -27,6 +27,7 @@ export const Header = styled.header`
     box-shadow: 0 0 0 9px white, 0 0 0 13px black;
     overflow: hidden;
   }
+
   img {
     display: block;
     width: 100%;
