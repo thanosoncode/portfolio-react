@@ -1,125 +1,76 @@
 import styled from "styled-components";
 
-export const StyledAbout = styled.section`
-  max-width: 740px;
-  margin: 140px auto 40px auto;
+export const Header = styled.div`
+  position: relative;
+  background-color: ${({ theme }) => theme.header};
+  color: ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.bg};
+  padding: 20px 0 30px 0;
+  font-size: ${({ theme }) => theme.headerSize};
+  text-align: center;
+  margin-top: 100px;
+  border-top: 1px solid ${({ theme }) => theme.color};
+  border-bottom: 1px solid ${({ theme }) => theme.color};
 
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    @media (max-width: 450px) {
-      flex-direction: column;
+  h4 {
+    display: block;
+    border-radius: ${({ theme }) => theme.radiusCard};
+    background: ${({ theme }) => theme.accent};
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    color: white;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+
+    @media (max-width: 720px) {
+      width: 300px;
     }
   }
-
-  h1 {
+  h4:hover {
+    background-color: ${({ theme }) => theme.accentDark};
+  }
+  h4 a {
+    color: white;
+    text-decoration: none;
+  }
+  article {
+    max-width: 968px;
+    margin: 0 auto;
     text-align: center;
-    font-weight: 900;
-    font-family: "Play", sans-serif;
-    font-size: ${({ theme }) => theme.mainTitle};
+    padding-top: 20px;
+  }
+
+  p {
+    line-height: 30px;
+    margin: 20px;
+  }
+
+  a {
+    font-size: ${({ theme }) => theme.links};
+    color: ${({ theme }) => theme.title};
+
+    text-decoration: underline;
   }
 
   span {
-    font-size: ${({ theme }) => theme.mainTitle};
-    margin-left: 10px;
-  }
-
-  @media (max-width: 800px) {
-    padding: 0 15px;
-    margin: 100px auto 40px auto;
-  }
-`;
-
-export const Grid = styled.section`
-  display: grid;
-  row-gap: 20px;
-  column-gap: 40px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.3fr 0.6fr 0.6fr 0.3fr;
-  grid-template-areas:
-    "image header"
-    "image article"
-    "image article"
-    "footer footer";
-
-  @media (max-width: 700px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-export const ImageContainer = styled.div`
-  border-radius: ${({ theme }) => theme.radiusCard};
-  overflow: hidden;
-  grid-area: image;
-  min-width: 330px;
-  min-height: 500px;
-  position: relative;
-  z-index: 0;
-
-  img {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: top;
-    border-radius: ${({ theme }) => theme.radiusCard};
-  }
-
-  @media (max-width: 700px) {
-    min-width: 384px;
-    margin-bottom: 20px;
-  }
-  @media (max-width: 400px) {
-    min-width: 354px;
-    margin-bottom: 20px;
-  }
-`;
-
-export const Article = styled.section`
-  grid-area: article;
-
-  h2 {
+    font-size: ${({ theme }) => theme.links};
     color: ${({ theme }) => theme.title};
-    font-size: ${({ theme }) => theme.titleSize};
-    text-align: center;
   }
-  p {
-    margin: 10px 0;
-    line-height: 28px;
-    text-align: justify;
-  }
-  @media (max-width: 700px) {
-    p {
-      margin: 5px 0;
-    }
-    h2 {
-      margin: 15px 0;
-    }
-    margin-top: 20px;
-  }
-`;
 
-export const Header = styled.div`
-  grid-area: header;
-  border-radius: ${({ theme }) => theme.radiusCard};
-  background-color: ${({ theme }) => theme.header};
-  color: white;
-  padding: 25px;
-  font-size: ${({ theme }) => theme.headerSize};
-  line-height: 34px;
-  text-align: center;
+  @media (max-width: 720px) {
+    margin-top: 100px;
+
+    p {
+      margin: 20px 5px;
+    }
+  }
 `;
 
 export const SectionFooter = styled.p`
-  grid-area: footer;
-
   margin-top: -20px;
   line-height: 28px;
   text-align: justify;

@@ -1,25 +1,25 @@
-import recipes from "./assets/thumbs/recipes.png";
-import gadgets from "./assets/thumbs/gadgets.jpg";
-import weather from "./assets/thumbs/weather.png";
-import atlas from "./assets/thumbs/atlas.jpg";
-import morning from "./assets/thumbs/morning.png";
+import recipes from "./thumbs/recipes.png";
+import gadgets from "./thumbs/gadgets.jpg";
+import weather from "./thumbs/weather.png";
+import atlas from "./thumbs/atlas.jpg";
+import morning from "./thumbs/morning.png";
 
 export const projectsData = [
   {
-    name: "Morning Pages",
+    name: "Morning Pages Clone",
     description:
-      "Full-stack app using React, Styled Components and Firebase back-end",
+      "Recreated this full-stack app using React.js, Styled Components and Firebase as back-end. Includes Firebase Authentication and Firestore",
     image: morning,
-    stack: ["React", "Styled Components", "Firebase"],
+    stack: ["React.js", "Styled-Components", "Firebase"],
     source: "https://react-morning-pages.netlify.app/",
     code: "https://github.com/thanosoncode/morning-pages",
   },
   {
-    name: "Gadgets",
+    name: "E-commerce App",
     description:
-      "E-commerce with mock up data as a practice to learn Context API and useReducer for state management",
+      "E-commerce with fake data as I was learning Context API and useReducer for state management. Includes details page for each item and Stripe-Checkout",
     image: gadgets,
-    stack: ["ReactJS", "CSS"],
+    stack: ["React.js", "CSS", "Stripe-Checkout"],
     source: "https://react-gadgets.netlify.app",
     code: "https://github.com/thanosoncode/next-recipes",
   },
@@ -28,16 +28,16 @@ export const projectsData = [
     description:
       "Responsive landing page; includes gallery, carousel,  mapbox map and contact form",
     image: atlas,
-    stack: ["NextJS", "CSS"],
+    stack: ["Next.js", "CSS"],
     source: "https://atlas-chania.netlify.app/",
     code: "https://github.com/thanosoncode/atlas-chania",
   },
   {
-    name: "All recipes",
+    name: "API Consumer",
     description:
-      "Responsive website that queries and tabulates data from an API based on search parameters",
+      "Responsive website that queries and tabulates data from an API based on search parameters using Next.js",
     image: recipes,
-    stack: ["NextJS", "Styled Components"],
+    stack: ["Next.js", "Styled-Components"],
     source: "https://nextjs-recipes.netlify.app/",
     code: "https://github.com/thanosoncode/themealdb",
   },
@@ -47,7 +47,7 @@ export const projectsData = [
     description:
       "At least once in your life you have to build a weather app. A responsive single page application",
     image: weather,
-    stack: ["ReactJS", "CSS"],
+    stack: ["React.js", "CSS"],
     source: "https://weather-thanos.netlify.app",
     code: "https://github.com/thanosoncode/weather-react",
   },

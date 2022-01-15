@@ -6,7 +6,7 @@ import {
   Stack,
   Image,
 } from "./styles/Projects.styled.js";
-import { projectsData } from "../projectsData";
+import { projectsData } from "../assets/projectsData";
 
 const Projects = () => {
   return (
@@ -14,9 +14,11 @@ const Projects = () => {
       <h5>My projects</h5>
       <p>
         These are all self-directed projects in order to get myself familiar
-        with different concepts. <br />
-        <a href="/">Let me know if you have any questions!</a>
+        with different concepts. <br />{" "}
       </p>
+      <h4>
+        <a href="#contact">Let me know if you have any questions! </a>
+      </h4>
       <Grid>
         {projectsData.map((item, index) => {
           const { name, description, stack, source, code, image } = item;

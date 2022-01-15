@@ -1,10 +1,10 @@
-import html from "../assets/html5.png";
-import css from "../assets/css3.png";
-import js from "../assets/js.png";
-import react from "../assets/react.jpg";
-import next from "../assets/next.png";
-import styled from "../assets/styled.jfif";
-import firebase from "../assets/firebase.png";
+import html from "../assets/images/html5.png";
+import css from "../assets/images/css3.png";
+import js from "../assets/images/js.png";
+import react from "../assets/images//react.jpg";
+import next from "../assets/images/next.png";
+import styled from "../assets/images/styled.jfif";
+import firebase from "../assets/images/firebase.png";
 import { StyledSkills, Flex, Image } from "./styles/Skills.styled";
 
 const stack = [

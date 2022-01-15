@@ -8,12 +8,13 @@ export const Container = styled.div`
   top: 0;
   left: 0;
   background: ${({ theme }) => theme.bg};
+  border-bottom: 1px solid #ccc;
 `;
 
 export const StyledNavbar = styled.nav`
   max-width: 90vw;
   margin: 0 auto;
-  padding: 25px 30px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,7 +90,7 @@ export const Links = styled.div`
   span {
     margin-left: 30px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 800;
     transition: transform 0.3s ease-in;
     font-size: ${({ theme }) => theme.links};
    
@@ -97,30 +98,26 @@ export const Links = styled.div`
 
   span:last-child{
     padding:3px 13px;
-    border: 2px solid ${({ theme }) => theme.color};
+    border: 2px solid ${({ theme }) => theme.accent};
     color: ${({ theme }) => theme.color};
-    border-radius:999px;
+    border-radius: ${({ theme }) => theme.radiusBtn};
     transition:0.3s ease;
     display:flex;
     justify-content:center;
     align-items:center;
     font-size: ${({ theme }) => theme.fontSize};
+    background-color:${({ theme }) => theme.accent};
+    font-weight:400;
+    
   }
 
   span:last-child:hover{
-    border:2px solid ${({ theme }) => theme.color};
-    background-color: ${({ theme }) => theme.color};
-    color: ${({ theme }) => theme.bg};;
+    background-color:${({ theme }) => theme.accentDark};
   }
  
-  span a {
-    color: ${({ theme }) => theme.color};
-    
-  } 
-
-  span a:hover {
-    color:white;
-  }
+span a {
+  color:white;
+}
 
   span:hover {
     opacity: 0.8;

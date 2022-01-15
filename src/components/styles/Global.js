@@ -10,8 +10,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   padding:0;
   margin:0;
-  scroll-behavior:smooth;
-}
+  }
 
 body {
   font-family: 'Roboto Slab', serif;

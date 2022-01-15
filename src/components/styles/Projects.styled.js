@@ -17,10 +17,13 @@ export const ProjectsContainer = styled.div`
     margin-bottom: 60px;
   }
 
-  a {
-    color: ${({ theme }) => theme.color};
+  h4 a {
+    color: ${({ theme }) => theme.accent};
     font-weight: 600;
+    text-decoration: underline;
+    font-size: ${({ theme }) => theme.fontSize};
   }
+
   @media (max-width: 800px) {
     padding: 0 15px;
   }
@@ -45,13 +48,16 @@ export const Grid = styled.section`
 export const Card = styled.div`
   border-radius: ${({ theme }) => theme.radiusCard};
   border: 1px solid #999;
-  box-shadow: 0 0 10px gray;
   overflow: hidden;
   transition: 0.3s ease;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column-reverse;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 7px 7px rgba(0, 0, 0, 0.22);
+  }
 
   article {
     padding: 15px;
@@ -105,18 +111,22 @@ export const Links = styled.div`
     padding: 4px 16px;
     transition: 0.3s ease;
     text-align: center;
-    border-radius: 999px;
+    border-radius: ${({ theme }) => theme.radiusBtn};
     font-weight: 500;
     font-size: ${({ theme }) => theme.fontSize};
     text-align: center;
-    border: 2px solid ${({ theme }) => theme.color};
-    color: ${({ theme }) => theme.color};
+    border: 2px solid ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.accent};
     margin: 0 5px;
   }
 
-  a:hover {
-    background: ${({ theme }) => theme.color};
+  a:last-child {
+    background-color: ${({ theme }) => theme.accent};
     color: white;
+  }
+
+  a:last-child:hover {
+    background-color: ${({ theme }) => theme.accentDark};
   }
 `;
 

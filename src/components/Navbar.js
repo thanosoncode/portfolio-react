@@ -13,7 +13,7 @@ import {
   MobileMenu,
   Container,
 } from "./styles/Navbar.styled.js";
-import logo from "../assets/profile.png";
+import logo from "../assets/images/profile.png";
 import { useGlobalContext } from "../context.js";
 
 const Navbar = () => {

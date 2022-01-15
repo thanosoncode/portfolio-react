@@ -1,22 +1,24 @@
 import React from "react";
-import img from "../assets/thanos-profile.jpg";
+import logo from "../assets/images/profile1.png";
 import Navbar from "./Navbar";
-import { Header } from "./styles/Hero.styled";
+import { Header, Flex, ImageContainer } from "./styles/Hero.styled";
 
 const Hero = () => {
   return (
     <>
       <Navbar />
-      <Header>
-        <h1>Front-End Web Developer</h1>
-        <h5>
-          I&#39;m front-end web developer in Athens, GR. I learned how to code
-          during lockdown!
-        </h5>
-        <div>
-          <img src={img} alt="" />
-        </div>
-      </Header>
+      <Flex>
+        <ImageContainer>
+          <img src={logo} alt="" />
+        </ImageContainer>
+        <Header>
+          <h1>Front-end Web Developer</h1>
+          <h5>
+            I&#39;m front-end web developer located in Athens, GR. <br /> I
+            enjoy building sleek websites and apps!
+          </h5>
+        </Header>
+      </Flex>
     </>
   );
 };

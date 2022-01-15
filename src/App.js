@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
-import Hero2 from "./components/Hero2";
-import About2 from "./components/About2";
+import Hero from "./components/Hero";
+import About from "./components/About";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -14,9 +14,8 @@ function App() {
     <ThemeProvider theme={nightMode ? nightTheme : dayTheme}>
       <>
         <GlobalStyles />
-        <Hero2 />
-        {/* <Navbar /> */}
-        <About2 />
+        <Hero />
+        <About />
         <Skills />
         <Projects />
         <Contact />

@@ -43,7 +43,7 @@ export const Flex = styled.div`
     margin-top: 0;
     margin-bottom: 20px;
     font-weight: 600;
-    color: ${({ theme }) => theme.title};
+    color: ${({ theme }) => theme.color};
   }
 
   @media (max-width: 700px) {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContactContainer = styled.div`
   max-width: 740px;
   margin: 120px auto 60px auto;
-  background-color: ${({ theme }) => theme.accentLight};
+  background-color: ${({ theme }) => theme.card};
   padding: 70px 90px;
   border-radius: ${({ theme }) => theme.radiusCard};
 
@@ -42,6 +42,11 @@ export const Form = styled.form`
     font-size: ${({ theme }) => theme.fontSize};
   }
 
+  input:focus,
+  textarea:focus {
+    border: 1px solid ${({ theme }) => theme.accent};
+  }
+
   input,
   button {
     height: 40px;
@@ -60,14 +65,14 @@ export const Form = styled.form`
 `;
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.color};
+  background-color: ${({ theme }) => theme.accent};
   color: white;
   cursor: pointer;
   border: none;
   transition: 0.3s ease;
-  font-size: ${({ theme }) => theme.fontSize};
+  font-size: ${({ theme }) => theme.headerSize};
   border-radius: ${({ theme }) => theme.radiusBtn};
-  font-weight: 600;
+  font-weight: 400;
   &:hover {
     background-color: ${({ theme }) => theme.colorLight};
   }
