@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "./styles/About.styled";
-import pdf from "../assets/ChrysanthopoulosThanos.pdf";
+import pdf from "../assets/Chrysanthopoulos-Thanos-Resume.pdf";
 
 const About = () => {
   return (
