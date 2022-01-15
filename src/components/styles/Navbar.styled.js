@@ -97,7 +97,7 @@ export const Links = styled.div`
   }
 
   span:last-child{
-    padding:3px 13px;
+    padding:7px 16px;
     border: 2px solid ${({ theme }) => theme.accent};
     color: ${({ theme }) => theme.color};
     border-radius: ${({ theme }) => theme.radiusBtn};

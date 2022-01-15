@@ -14,9 +14,11 @@ export const ProjectsContainer = styled.div`
 
   p {
     font-size: ${({ theme }) => theme.fontSize};
-    margin-bottom: 60px;
   }
 
+  h4 {
+    margin-bottom: 60px;
+  }
   h4 a {
     color: ${({ theme }) => theme.accent};
     font-weight: 600;
