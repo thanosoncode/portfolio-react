@@ -14,7 +14,7 @@ export const Header = styled.div`
 
   h4 {
     display: block;
-    border-radius: ${({ theme }) => theme.radiusCard};
+    border-radius: ${({ theme }) => theme.radiusBtn};
     background: ${({ theme }) => theme.accent};
     position: absolute;
     top: 0;
@@ -27,7 +27,8 @@ export const Header = styled.div`
     font-weight: 500;
 
     @media (max-width: 720px) {
-      width: 300px;
+      width: 330px;
+      padding: 15px 20px;
     }
   }
   h4:hover {

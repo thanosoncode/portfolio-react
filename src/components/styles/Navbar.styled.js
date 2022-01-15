@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const StyledNavbar = styled.nav`
   max-width: 90vw;
   margin: 0 auto;
-  padding: 15px 30px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

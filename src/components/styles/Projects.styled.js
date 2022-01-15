@@ -19,10 +19,10 @@ export const ProjectsContainer = styled.div`
   h4 {
     margin-bottom: 60px;
   }
+
   h4 a {
     color: ${({ theme }) => theme.accent};
     font-weight: 600;
-    text-decoration: underline;
     font-size: ${({ theme }) => theme.fontSize};
   }
 
@@ -31,8 +31,8 @@ export const ProjectsContainer = styled.div`
   }
 
   @media (max-width: 700px) {
-    p {
-      margin-bottom: 50px;
+    h4 {
+      margin-bottom: 40px;
     }
   }
 `;
