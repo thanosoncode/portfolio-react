@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
-  max-width: 740px;
+  max-width: 900px;
   margin: 0 auto;
 
   h5 {
-    margin: 30px 0 50px 0;
+    margin: 40px 0;
     color: ${({ theme }) => theme.title};
     font-weight: 800;
     font-size: ${({ theme }) => theme.titleSize};
@@ -14,10 +14,12 @@ export const ProjectsContainer = styled.div`
 
   p {
     font-size: ${({ theme }) => theme.fontSize};
+    text-align: center;
   }
 
   h4 {
     margin-bottom: 60px;
+    text-align: center;
   }
 
   h4 a {
@@ -39,11 +41,13 @@ export const ProjectsContainer = styled.div`
 
 export const Grid = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, 400px);
   gap: 40px;
+  justify-content: center;
 
   @media (max-width: 700px) {
     gap: 80px;
+    grid-template-columns: repeat(auto-fit, 380px);
   }
 `;
 
@@ -58,7 +62,7 @@ export const Card = styled.div`
   flex-direction: column-reverse;
 
   &:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 7px 7px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
   }
 
   article {
@@ -141,12 +145,12 @@ export const Image = styled.div`
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: cover;
-
+    object-fit: contain;
+    object-position: top;
     transition: 0.3s ease-out;
   }
 
   img:hover {
-    transform: rotate(45deg) scale(1.4);
+    transform: scale(1.15);
   }
 `;

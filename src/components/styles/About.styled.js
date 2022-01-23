@@ -20,7 +20,7 @@ export const Header = styled.div`
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 20px 30px;
+    padding: 20px 80px;
     color: white;
     transition: 0.3s ease;
     cursor: pointer;
@@ -42,7 +42,7 @@ export const Header = styled.div`
     max-width: 968px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 20px;
+    padding: 20px 10px 10px 10px;
   }
 
   p {
@@ -64,6 +64,10 @@ export const Header = styled.div`
 
   @media (max-width: 720px) {
     margin-top: 100px;
+
+    article {
+      text-align: justify;
+    }
 
     p {
       margin: 20px 5px;

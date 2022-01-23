@@ -42,10 +42,8 @@ export const Image = styled.div`
   border-radius: 100%;
   overflow: hidden;
   margin-right: 10px;
-
   transition: transform 0.3s ease-in;
   cursor: pointer;
-  position: relative;
   background: black;
 
   &:hover {
@@ -57,9 +55,6 @@ export const Image = styled.div`
     height: 100%;
     object-fit: cover;
     object-position: top;
-    position: absolute;
-    top: -5px;
-    left: 10px;
   }
 `;
 
@@ -85,53 +80,50 @@ export const StyledSocials = styled.ul`
   }
 `;
 
-export const Links = styled.div`
+export const Contact = styled.a`
+  padding: 7px 16px;
+  border: 2px solid ${({ theme }) => theme.accent};
+  border-radius: ${({ theme }) => theme.radiusBtn};
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: ${({ theme }) => theme.fontSize};
+  background-color: ${({ theme }) => theme.bg};
+  font-weight: 400;
+  color: ${({ theme }) => theme.accent};
 
-  span {
-    margin-left: 30px;
-    cursor: pointer;
-    font-weight: 800;
-    transition: transform 0.3s ease-in;
-    font-size: ${({ theme }) => theme.links};
-   
-  }
-
-  span:last-child{
-    padding:7px 16px;
-    border: 2px solid ${({ theme }) => theme.accent};
-    color: ${({ theme }) => theme.color};
-    border-radius: ${({ theme }) => theme.radiusBtn};
-    transition:0.3s ease;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size: ${({ theme }) => theme.fontSize};
-    background-color:${({ theme }) => theme.accent};
-    font-weight:400;
-    
-  }
-
-  span:last-child:hover{
-    background-color:${({ theme }) => theme.accentDark};
-  }
- 
-span a {
-  color:white;
-}
-
-  span:hover {
+  &:hover {
+    background-color: ${({ theme }) => theme.accent};
     opacity: 0.8;
-  } 
-
+    color: white;
   }
-  @media (max-width: 700px) {
-    span {
-      margin-left:20px;
-    }
 
-    span:last-child{
-      padding:3px 8px;
-    }
+  @media (max-width: 700px) {
+    padding: 3px 8px;
+  }
+`;
+
+export const Settings = styled.span`
+  cursor: pointer;
+
+  text-align: center;
+  transition: transform 0.3s ease-in;
+  font-size: ${({ theme }) => theme.links};
+  color: ${({ theme }) => theme.color};
+  transition: 0.3s ease;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  padding: 7px 8px;
+  border-bottom: 2px solid ${({ theme }) => theme.accent};
+  margin-right: 30px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.accent};
+    opacity: 0.8;
+    color: white;
   }
 `;
 

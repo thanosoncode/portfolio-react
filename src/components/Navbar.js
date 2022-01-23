@@ -5,15 +5,16 @@ import {
   StyledNavbar,
   Image,
   StyledSocials,
-  Links,
+  Contact,
   Modal,
   SwitchContainer,
   Letter,
   Triangle,
   MobileMenu,
+  Settings,
   Container,
 } from "./styles/Navbar.styled.js";
-import logo from "../assets/images/profile.png";
+import avatar from "../assets/images/thanos-port.png";
 import { useGlobalContext } from "../context.js";
 
 const Navbar = () => {
@@ -30,9 +31,9 @@ const Navbar = () => {
 
   const getSettingsCoords = () => {
     const distanceFromLeft =
-      settings.current.getBoundingClientRect().x - 155 + "px";
+      settings.current.getBoundingClientRect().x - 150 + "px";
     const distanceFromTop =
-      settings.current.getBoundingClientRect().y + 40 + "px";
+      settings.current.getBoundingClientRect().y + 48 + "px";
 
     setFromLeft(distanceFromLeft);
     setFromTop(distanceFromTop);
@@ -80,7 +81,7 @@ const Navbar = () => {
       <StyledNavbar>
         <div>
           <Image>
-            <img src={logo} alt="" />
+            <img src={avatar} alt="" />
           </Image>
           <p></p>
           <StyledSocials>
@@ -104,14 +105,12 @@ const Navbar = () => {
             </li>
           </StyledSocials>
         </div>
-        <Links>
-          <span ref={settings} onClick={handleSettingsClick}>
+        <div>
+          <Settings ref={settings} onClick={handleSettingsClick}>
             <GoSettings />
-          </span>
-          <span>
-            <a href="#contact">Contact me</a>
-          </span>
-        </Links>
+          </Settings>
+          <Contact href="#contact">Contact me</Contact>
+        </div>
 
         <MobileMenu
           visibility={isMenuOpen ? "visible" : "hidden"}

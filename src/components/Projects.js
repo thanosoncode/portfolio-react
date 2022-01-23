@@ -11,7 +11,7 @@ import { projectsData } from "../assets/projectsData";
 const Projects = () => {
   return (
     <ProjectsContainer id="projects">
-      <h5>My projects</h5>
+      <h5>Recent Projects</h5>
       <p>
         These are all self-directed projects in order to get myself familiar
         with different concepts. <br />{" "}

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSkills = styled.div`
-  max-width: 740px;
+  max-width: 840px;
   margin: 150px auto 120px auto;
 
   p {

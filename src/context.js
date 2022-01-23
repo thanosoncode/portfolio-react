@@ -14,7 +14,10 @@ export const AppContextProvider = ({ children }) => {
 
   const headerSizes = ["19px", "20px", "21px"];
 
-  const mainTitleSizes = ["60px", "64px", "68px"];
+  const mainTitleSizes = ["100px", "104px", "108px"];
+  const mainTitleSizesMobile = ["70px", "74px", "78px"];
+
+  const secondaryTitleSizes = ["48px", "52px", "54px"];
 
   const links = ["20px", "22px", "24px"];
 
@@ -38,6 +41,8 @@ export const AppContextProvider = ({ children }) => {
     titleSize: titleSizes[index],
     headerSize: headerSizes[index],
     mainTitle: mainTitleSizes[index],
+    mobileMainTitle: mainTitleSizesMobile[index],
+    secondaryTitle: secondaryTitleSizes[index],
     links: links[index],
     overflow: overflow,
   };
@@ -61,6 +66,8 @@ export const AppContextProvider = ({ children }) => {
     titleSize: titleSizes[index],
     headerSize: headerSizes[index],
     mainTitle: mainTitleSizes[index],
+    mobileMainTitle: mainTitleSizesMobile[index],
+    secondaryTitle: secondaryTitleSizes[index],
     links: links[index],
     overflow: overflow,
   };

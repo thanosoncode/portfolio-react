@@ -5,6 +5,7 @@ import react from "../assets/images//react2.jpg";
 import next from "../assets/images/next.png";
 import styled from "../assets/images/styled.jfif";
 import firebase from "../assets/images/firebase.png";
+import redux from "../assets/images/redux.png";
 import { StyledSkills, Flex, Image } from "./styles/Skills.styled";
 
 const stack = [
@@ -15,12 +16,13 @@ const stack = [
   { name: "Next.js", image: next },
   { name: "Styled Comp", image: styled },
   { name: "Firebase", image: firebase },
+  { name: "Redux", image: redux },
 ];
 
 const Skills = () => {
   return (
     <StyledSkills id="skills">
-      <p>My skills</p>
+      <p>Things I&#39;ve learned</p>
 
       <Flex>
         {stack.map((item, index) => {

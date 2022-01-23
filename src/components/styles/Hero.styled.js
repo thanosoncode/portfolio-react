@@ -1,104 +1,100 @@
 import styled from "styled-components";
 
 export const Flex = styled.div`
-  max-width: 900px;
+  max-width: 1100px;
   margin: 90px auto 0 auto;
   height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  /* background: gray; */
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 40px;
+  h1 {
+    font-size: ${({ theme }) => theme.mainTitle};
+    color: ${({ theme }) => theme.accent};
+    margin: 130px 0 30px 0;
+    width: 100%;
+    font-weight: 800;
+    font-size: ${({ theme }) => theme.mainTitle};
+    text-align: center;
+  }
 
-  place-items: center;
-  grid-template-areas: "image header header header";
-
-  @media (max-width: 720px) {
-    margin: 150px auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    place-items: center;
-
+  @media (max-width: 950px) {
     height: auto;
-    grid-template-areas:
-      "header"
-      "image";
-    gap: 10px;
+  }
+
+  @media (max-width: 550px) {
+    height: auto;
+
+    h1 {
+      font-size: ${({ theme }) => theme.mobileMainTitle};
+      margin: 20px 0;
+    }
   }
 `;
 
 export const Header = styled.header`
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
+
   height: 450px;
   width: 100%;
   padding: 10px;
   margin: 0;
+  margin-top: 20px;
   text-align: center;
-  grid-area: header;
 
-  h4 {
-    font-size: ${({ theme }) => theme.titleSize};
+  h3 {
     font-weight: 500;
-  }
-
-  h1 {
-    font-size: ${({ theme }) => theme.mainTitle};
-    color: ${({ theme }) => theme.title};
-    margin-bottom: 50px;
+    font-size: ${({ theme }) => theme.secondaryTitle};
     width: 100%;
-    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 20px;
   }
 
   h5 {
-    font-size: ${({ theme }) => theme.titleSize};
+    font-size: ${({ theme }) => theme.links};
     font-weight: 400;
     width: 100%;
     margin-bottom: 20px;
   }
-`;
 
-export const ImageContainer = styled.div`
-  border-radius: ${({ theme }) => theme.radiusCard};
-  overflow: hidden;
-  grid-area: image;
-  width: 330px;
-  height: 450px;
-  position: relative;
-  z-index: 0;
-  filter: grayscale(10%);
-  background: black;
-
-  border-radius: 50%;
-  height: 250px;
-  width: 250px;
-
-  img {
-    position: absolute;
-    z-index: 1;
-    /* top: 0;
-    left: 0; */
-    left: 40px;
-    top: -40px;
-    /* width: 100%; */
-
+  @media (max-width: 950px) {
+    flex-direction: column-reverse;
     height: auto;
-    object-fit: contain;
-    object-position: center;
-    border-radius: ${({ theme }) => theme.radiusCard};
+    align-items: center;
 
-    @media (max-width: 720px) {
-      left: 40px;
-      top: -40px;
+    h3,
+    h5 {
+      margin-bottom: 40px;
     }
   }
 
-  @media (max-width: 720px) {
-    grid-row: 2;
-    border-radius: 50%;
-    height: 250px;
-    width: 250px;
+  @media (max-width: 550px) {
+    h3 {
+      font-size: ${({ theme }) => theme.secondaryTitle};
+      margin: 0 0 10px 0;
+    }
+
+    h5 {
+      font-size: ${({ theme }) => theme.links};
+    }
+  }
+`;
+
+export const ImageContainer = styled.div`
+  width: 220px;
+  height: 220px;
+  margin-right: 20px;
+
+  @media (max-width: 550px) {
+    width: 190px;
+    height: 190px;
+  }
+
+  img {
+    width: 100%;
   }
 `;
