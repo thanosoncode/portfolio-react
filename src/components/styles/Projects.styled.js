@@ -145,7 +145,7 @@ export const Image = styled.div`
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain;
+    object-fit: cover;
     object-position: top;
     transition: 0.3s ease-out;
   }

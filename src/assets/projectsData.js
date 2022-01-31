@@ -1,11 +1,21 @@
-import recipes from "./thumbs/recipes.png";
+// import recipes from "./thumbs/recipes.png";
 import gadgets from "./thumbs/gadgets.jpg";
-import weather from "./thumbs/weather.png";
-import atlas from "./thumbs/atlas.jpg";
+// import weather from "./thumbs/weather.png";
+// import atlas from "./thumbs/atlas.jpg";
 import morning from "./thumbs/morning.png";
 import common from "./thumbs/common.jpg";
+import movies from "./thumbs/movies.png";
 
 export const projectsData = [
+  {
+    name: "Framer-motion Movie App",
+    description:
+      "Utilizing Framer-motion library together with TheMovieDb API to create React.js Movie App with animations",
+    image: movies,
+    stack: ["React.js", "Framer-motion", "Styled-Components"],
+    source: "https://framer-motion-movie-app.netlify.app/",
+    code: "https://github.com/thanosoncode/framer-motion-movie-app",
+  },
   {
     name: "Common.com Multi-Step Search",
     description:
@@ -33,31 +43,31 @@ export const projectsData = [
     source: "https://react-gadgets.netlify.app",
     code: "https://github.com/thanosoncode/next-recipes",
   },
-  {
-    name: "Landing Page",
-    description:
-      "Responsive landing page using Nex.js; includes gallery, carousel,  mapbox map and contact form",
-    image: atlas,
-    stack: ["Next.js", "CSS"],
-    source: "https://atlas-chania.netlify.app/",
-    code: "https://github.com/thanosoncode/atlas-chania",
-  },
-  {
-    name: "TheMealDb API",
-    description:
-      "Responsive website that queries and tabulates data from an API based on search parameters using Next.js",
-    image: recipes,
-    stack: ["Next.js", "Styled-Components"],
-    source: "https://nextjs-recipes.netlify.app/",
-    code: "https://github.com/thanosoncode/themealdb",
-  },
+  // {
+  //   name: "Landing Page",
+  //   description:
+  //     "Responsive landing page using Nex.js; includes gallery, carousel,  mapbox map and contact form",
+  //   image: atlas,
+  //   stack: ["Next.js", "CSS"],
+  //   source: "https://atlas-chania.netlify.app/",
+  //   code: "https://github.com/thanosoncode/atlas-chania",
+  // },
+  // {
+  //   name: "TheMealDb API",
+  //   description:
+  //     "Responsive website that queries and tabulates data from an API based on search parameters using Next.js",
+  //   image: recipes,
+  //   stack: ["Next.js", "Styled-Components"],
+  //   source: "https://nextjs-recipes.netlify.app/",
+  //   code: "https://github.com/thanosoncode/themealdb",
+  // },
 
-  {
-    name: "Weather App",
-    description: "At least once in your life you have to build a weather app.",
-    image: weather,
-    stack: ["React.js", "CSS"],
-    source: "https://weather-thanos.netlify.app",
-    code: "https://github.com/thanosoncode/weather-react",
-  },
+  // {
+  //   name: "Weather App",
+  //   description: "At least once in your life you have to build a weather app.",
+  //   image: weather,
+  //   stack: ["React.js", "CSS"],
+  //   source: "https://weather-thanos.netlify.app",
+  //   code: "https://github.com/thanosoncode/weather-react",
+  // },
 ];
